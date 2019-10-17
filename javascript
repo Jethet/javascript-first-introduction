@@ -25,3 +25,6 @@ var b;
 a = 7;
 b = 7;
 b = a;
+
+To run JS files use node (download www.node.org),
+using the command: node file.js
