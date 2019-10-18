@@ -32,5 +32,10 @@ For a string, the result will be "undefined".
 
 VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalized
 
+addition (+), substraction (-), division (/) and multiplication (*) are the same as in Python.
+incrementing (adding) one to a variable is done with ++
+Example: i = i + 1 can be used with the ++ operator and becomes: i++
+
+
 To run JS files use node (download www.node.org),
 using the command: node file.js
