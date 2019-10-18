@@ -30,5 +30,7 @@ A variable that is declared but not initialized has the value 'undefined'
 For a number the result with an undefined varialbe will be 'NaN' (not a number).
 For a string, the result will be "undefined".
 
+VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalized
+
 To run JS files use node (download www.node.org),
 using the command: node file.js
