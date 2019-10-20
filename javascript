@@ -3,7 +3,8 @@
 use this */
 // for an inline comment, use this //
 
-JavaScript STATEMENTS END WITH SEMI-COLUMN ;
+JavaScript STATEMENTS END WITH SEMI-COLUMN ;   !!!!
+---------------------------------------------------
 
 JS data types: (can all be stored in variables)
 string
@@ -35,6 +36,10 @@ VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are c
 addition (+), substraction (-), division (/) and multiplication (*) are the same as in Python.
 incrementing (adding) one to a variable is done with ++
 Example: i = i + 1 can be used with the ++ operator and becomes: i++
+
+
+
+
 
 
 To run JS files use node (download www.node.org),
