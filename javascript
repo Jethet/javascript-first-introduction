@@ -73,6 +73,13 @@ Code	Output
 
 Note that the backslash itself must be escaped in order to display as a backslash !!
 
+Concatenation: build a new string out of other strings by concatenating (+) them together.
+NOTE: spaces must be added where needed, within ""
+NOTE: use the += operator to concatenate a string onto the end of an existing string to break a long string
+over several lines. This means:
+myVar = "This is a very long long long long sentence, including a space because another sentence is added."
+myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
+
 
 
 
