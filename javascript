@@ -22,18 +22,18 @@ Assignment always goes from right to left. Everything to the right of the
 = operator is resolved before the value is assigned to the variable to the
 left of the operator. Example:
 declaring variables: var a;  var b;
-initializing variables: a = 7;  b = 7;
+initialising variables: a = 7;  b = 7;
 assigning a to b: b = a;
 
-It is custom to declare and initialize in the same line: var a = 7;
+It is custom to declare and initialise in the same line: var a = 7;
 
-A variable that is declared but not initialized has the value 'undefined'
-For a number the result with an undefined varialbe will be 'NaN' (not a number).
+A variable that is declared but not initialised has the value 'undefined'
+For a number the result with an undefined variable will be 'NaN' (not a number).
 For a string, the result will be "undefined".
 
-VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalized
+VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalised
 
-addition (+), substraction (-), division (/) and multiplication (*) are the same as in Python.
+addition (+), subtraction (-), division (/) and multiplication (*) are the same as in Python.
 incrementing (adding) one to a variable is done with ++
 Example: i = i + 1 can be used with the ++ operator and becomes: i++
 

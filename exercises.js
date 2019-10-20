@@ -6,3 +6,6 @@ var b;
 a = 5;
 b = 5;
 b = a;
+
+/* ALWAYS FIRST DECLARE A VARIABLE
+AND THEN ASSIGN A VARIABLE */
