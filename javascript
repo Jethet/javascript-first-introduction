@@ -80,6 +80,10 @@ over several lines. This means:
 myVar = "This is a very long long long long sentence, including a space because another sentence is added."
 myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
 
+LENGTH: with myVar.length you can calculate the length of a string.
+INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
+myVar[myVar.length - 1]
+
 
 
 
