@@ -82,7 +82,19 @@ myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE J
 
 LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
-myVar[myVar.length - 1]
+myVar[myVar.length - 1];
+
+EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
+Null and undefined are values but carry no information.
+
+
+JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
+a value to the type it needs, with a confusing set of rules. Example:
+console.log("5" - 1);  will result in 4
+console.log("5" + 1);  will result in 51
+This can be useful to find out if a value has a real value, example: console.log(null==0);
+
+If you want to test if a value is precisely equal to the other (or not) use: === and !==
 
 
 
