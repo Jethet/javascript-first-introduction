@@ -2,6 +2,7 @@
 /* for multiple lines of comments
 use this */
 // for an inline comment, use this //
+PRINT with console.log();
 
 JavaScript STATEMENTS END WITH SEMI-COLUMN ;   !!!!
 ---------------------------------------------------
@@ -18,6 +19,9 @@ undefined
 variables cannot start with a number or contain spaces but $ and _ can be used
 (example: var myName; var _a1b2;)
 
+EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
+Null and undefined are values but carry no information.
+
 Assignment always goes from right to left. Everything to the right of the
 = operator is resolved before the value is assigned to the variable to the
 left of the operator. Example:
@@ -32,6 +36,14 @@ For a number the result with an undefined variable will be 'NaN' (not a number).
 For a string, the result will be "undefined".
 
 VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalised
+
+GLOBAL SCOPE: variables which are defined outside of a function block have Global scope, i.e.
+they can be seen everywhere in the JavaScript code. Variables used WITHOUT THE VAR are
+automatically created in global scope. It is important to use var when declaring a variable.
+LOCAL SCOPE: variables declared in a function are not defined outside that function, i.e.
+not visible.
+It is possible to have both local and global variables with the SAME name. In this case the
+local variable takes precedence over the global variable.
 
 addition (+), subtraction (-), division (/) and multiplication (*) are the same as in Python.
 incrementing (adding) one to a variable is done with ++
@@ -88,10 +100,13 @@ ARRAYS: square brackets; indexing possible (also nexted indexing)
 PUSH: add new value at end with myArray.push()
 POP: remove and return the last value of array with .pop()
 SHIFT: remove and return the first value of array with .shift()
+UNSHIFT: add a new value as the first value of array with .unshift()
 
-EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
-Null and undefined are values but carry no information.
-
+FUNCTIONS are built using:
+function functionName() {
+  <what the function does>
+}
+Pass values into a function with arguments and use a return statement to send a value back out of a function.
 
 JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
 a value to the type it needs, with a confusing set of rules. Example:
