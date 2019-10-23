@@ -84,6 +84,11 @@ LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
 myVar[myVar.length - 1];
 
+ARRAYS: square brackets; indexing possible (also nexted indexing)
+PUSH: add new value at end with myArray.push()
+POP: remove and return the last value of array with .pop()
+SHIFT: remove and return the first value of array with .shift()
+
 EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
 Null and undefined are values but carry no information.
 
