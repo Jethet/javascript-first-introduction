@@ -15,4 +15,4 @@ for (let i = 0; i <= number; i++) {
 }
 }
 
-console.log(fizzBuzz(100))
+fizzBuzz(100)
