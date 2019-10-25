@@ -31,7 +31,7 @@ initialising variables: a = 7;  b = 7;
 assigning a to b: b = a;
 
 It is custom to declare and initialise in the same line: var a = 7;
-You can declare more variables: var x, y, z;  assign separately: x = 3, y = 5, z = 7;
+You can declare more variables: var x, y, z; (commas!) assign separately: x = 3; y = 5; z = 7; (semi-columns!)
 
 A variable that is declared but not initialised has the value 'undefined'
 For a number the result with an undefined variable will be 'NaN' (not a number).
