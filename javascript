@@ -160,11 +160,29 @@ switch(val) {
     result = "4 alone";
 }
 
+OBJECTS:
+Objects are variables that can contain many values called properties. The properties are written as value pairs:
+name and value separated by a colon. Properties can be numbers or strings.
+If an object has any non-string properties, JavaScript will automatically typecast them as strings.
+The data in objects can be accessed through what are called properties either with dot notation or indexing.
+Dot notation can be used if the name of the property to be accessed is known:
+var myObj = {
+  prop1: "val1",
+  prop2: "val2"
+};
+var prop1val = myObj.prop1;   (to access "val1")
+var prop2val = myObj.prop2;   (to access "val2")
 
-
-
-
-
+The second way to access the properties of an object is bracket notation ([]). If the property of the object
+has a space in its name, bracket notation must be used to access it. It is also possible to use bracket notation
+on object properties without spaces. Note: the property with spaces must be between quotes.
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+var entreeValue = testObj["an entree"];     (to access "hamburger")
+var drinkValue = testObj["the drink"];      (to access "water")
 
 To run JS files use node (download www.node.org),
 using the command: node file.js
