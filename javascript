@@ -183,6 +183,12 @@ var testObj = {
 };
 var entreeValue = testObj["an entree"];     (to access "hamburger")
 var drinkValue = testObj["the drink"];      (to access "water")
+NOTE: Another use of bracket notation on objects is to access a property which is stored as the value of a variable.
+This can be very useful for iterating through an object's properties or when accessing a lookup table.
+It is possible to assign a variable to a property (e.g. var X = firstName, a property from var objExample), and then
+access this property: var Y = objExample[X];.
+
+
 
 To run JS files use node (download www.node.org),
 using the command: node file.js
