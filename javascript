@@ -98,7 +98,7 @@ LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
 myVar[myVar.length - 1];
 
-ARRAYS: square brackets; indexing possible (also nexted indexing)
+ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at end with myArray.push()
 POP: remove and return the last value of array with .pop()
 SHIFT: remove and return the first value of array with .shift()
@@ -115,9 +115,11 @@ a value to the type it needs, with a confusing set of rules. Example:
 console.log("5" - 1);  will result in 4
 console.log("5" + 1);  will result in 51
 This can be useful to find out if a value has a real value, example: console.log(null==0);
+This means that with == JS can CHANGE the type of value.
+If you want to test if a value is PRECISELY equal to the other (or not) use: === and !==
 
-If you want to test if a value is precisely equal to the other (or not) use: === and !==
-
+&& (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
+|| (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
 
 
 
