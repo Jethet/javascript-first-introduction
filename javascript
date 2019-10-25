@@ -121,7 +121,33 @@ If you want to test if a value is PRECISELY equal to the other (or not) use: ===
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
 || (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
 
+SWITCH STATEMENT can be used to handle many options to choose from. A switch statement tests a value and can
+have many case statements which define various possible values. Statements are executed from the first matched
+case value until a break is encountered:
+switch(num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  case valueN:
+    statementN;
+    break;
+}
 
+Case values are tested with strict equality (===). The break tells JavaScript to stop executing statements.
+If the break is omitted, the next statement will be executed.
+It is possible to add a default statement for values that do not meet the case values:
+switch (val) {
+case value1:
+  statement1;
+  break;
+default:
+  default statement;
+  break;
+}
 
 
 
