@@ -164,6 +164,7 @@ OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
 name and value separated by a colon. Properties can be numbers or strings.
 If an object has any non-string properties, JavaScript will automatically typecast them as strings.
+ACCESS DATA IN OBJECTS:
 The data in objects can be accessed through what are called properties either with dot notation or indexing.
 Dot notation can be used if the name of the property to be accessed is known:
 var myObj = {
@@ -187,6 +188,15 @@ NOTE: Another use of bracket notation on objects is to access a property which i
 This can be very useful for iterating through an object's properties or when accessing a lookup table.
 It is possible to assign a variable to a property (e.g. var X = firstName, a property from var objExample), and then
 access this property: var Y = objExample[X];.
+UPDATE or ADD PROPERTIES:
+After creating a JavaScript object, its properties can be updated by using either dot or bracket notation:
+myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
+Adding properties works the same way: myObject.newProperty = "A new property"
+DELETE PROPERTIES: use 'delete':  delete myObject.newProperty
+
+LOOKUP DATA using OBJECTS:
+Objects can be considered as key value pairs: property and value (as in dictionary). This can be used to find data.
+
 
 
 
