@@ -170,14 +170,6 @@ function test (myCondition) {
 }
 The function is executed from TOP to BOTTOM so be careful of what statement comes first.
 
-WHILE loop:
-var ourArray = [];
-var i = 0;
-while(i < 5) {
-  ourArray.push(i);   ==> this adds i to ourArray[]
-  i++;                ==> this iterates until i === 5
-}
-
 FOR loop:
 For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3]) {  ....  }
 1 = [initialization];
@@ -190,6 +182,23 @@ This means if condition starts as false, the loop will never execute.
 The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
 usually used to increment or decrement your the counter. This can be done i++ or i+=2 or i+=3, etc.
 Example: for (var i = 0; i < 5; i++) { .... }
+
+WHILE loop:
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);   ==> this adds i to ourArray[]
+  i++;                ==> this iterates until i === 5
+}
+DO .. WHILE loop:
+A do...while loop will first do one pass of the code inside the loop no matter what, and then continue to run
+the loop while the specified condition evaluates to true:
+var ourArray = [];
+var i = 0;
+do { ourArray.push(i);
+  i++;
+} while i < 5;
+
 
 OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
