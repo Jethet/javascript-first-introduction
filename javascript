@@ -164,6 +164,7 @@ OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
 name and value separated by a colon. Properties can be numbers or strings.
 If an object has any non-string properties, JavaScript will automatically typecast them as strings.
+
 ACCESS DATA IN OBJECTS:
 The data in objects can be accessed through what are called properties either with dot notation or indexing.
 Dot notation can be used if the name of the property to be accessed is known:
@@ -200,7 +201,28 @@ Use object name plus brackets with property (key): myObject[newName]
 A variable can be assigned to another variable and this can also be used to lookup data:
 var a = {1:"one", 2:"two", 3:"three"}   var result = var number[val]   result = number[2]  ==> gives "two"
 
+DETERMINE PROPERTY:
+Use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
+.hasOwnProperty() returns true or false if the property is found or not.
 
+COMPLEX OBJECTS:
+A var can have a complex structure, for example a var array which contains objects and these objects have various
+properties in key/value format. These properties can be strings, numbers or arrays. This means that:
+var a = [
+  {
+  "firstName": "John",
+  "lastName": "Baker"
+  },
+  {
+  "firstName": "Paul"
+  "Age": 25
+  }
+  {"type of function": ["clerk", "manager", "bookkeeper"]
+  }
+]
+ACCESS DATA IN COMPLEX OBJECTS:
+Use both the .dot and []brackets methods:
+"employee" = a.0["firstName"]
 
 To run JS files use node (download www.node.org),
 using the command: node file.js
