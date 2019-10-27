@@ -196,7 +196,9 @@ DELETE PROPERTIES: use 'delete':  delete myObject.newProperty
 
 LOOKUP DATA using OBJECTS:
 Objects can be considered as key value pairs: property and value (as in dictionary). This can be used to find data.
-
+Use object name plus brackets with property (key): myObject[newName]
+A variable can be assigned to another variable and this can also be used to lookup data:
+var a = {1:"one", 2:"two", 3:"three"}   var result = var number[val]   result = number[2]  ==> gives "two"
 
 
 
