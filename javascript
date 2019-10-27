@@ -179,17 +179,17 @@ while(i < 5) {
 }
 
 FOR loop:
-For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3])
+For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3]) {  ....  }
 1 = [initialization];
-2 = [condition];
-3 = [final-expression])
 The initialization statement is executed only once before the loop starts, to define and setup the loop variable.
+2 = [condition];
 The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it
 evaluates to true. When condition is false at the start of the iteration, the loop will stop executing.
 This means if condition starts as false, the loop will never execute.
+3 = [final-expression]
 The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
-usually used to increment or decrement your the counter.
-
+usually used to increment or decrement your the counter. This can be done i++ or i+=2 or i+=3, etc.
+Example: for (var i = 0; i < 5; i++) { .... }
 
 OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
