@@ -198,7 +198,8 @@ var i = 0;
 do { ourArray.push(i);
   i++;
 } while i < 5;
-
+Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
+running the code and if this condition is met, the loop will stop. If the condition is not met, the loop will continue.
 
 OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
