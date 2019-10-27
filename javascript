@@ -71,7 +71,6 @@ IMPORTANT: when using single quotes ('') and double quotes (""), for example des
 there should be an even set of quotes. Watch out with things like 'I'm': this MUST be: 'I\'m' ==> backslash
 
 There are two reasons to use escaping characters:
-
   1) To allow you to use characters you may not otherwise be able to type out, such as a carriage returns.
   2) To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
 
@@ -84,7 +83,6 @@ Code	Output
 \t	 tab
 \b	 word boundary
 \f	 form feed
-
 Note that the backslash itself must be escaped in order to display as a backslash !!
 
 Concatenation: build a new string out of other strings by concatenating (+) them together.
@@ -97,7 +95,6 @@ myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE J
 LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
 myVar[myVar.length - 1];
-
 ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at end with myArray.push()
 POP: remove and return the last value of array with .pop()
@@ -159,6 +156,40 @@ switch(val) {
   case 4:
     result = "4 alone";
 }
+
+
+IF and ELSE IF and ELSE loops:
+function test (myCondition) {
+  if (myCondition) {
+     return "It was true";
+  } else if (otherCondition) {
+    return "It could be true"
+  } else {
+  return "It was false";
+  }
+}
+The function is executed from TOP to BOTTOM so be careful of what statement comes first.
+
+WHILE loop:
+var ourArray = [];
+var i = 0;
+while(i < 5) {
+  ourArray.push(i);   ==> this adds i to ourArray[]
+  i++;                ==> this iterates until i === 5
+}
+
+FOR loop:
+For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3])
+1 = [initialization];
+2 = [condition];
+3 = [final-expression])
+The initialization statement is executed only once before the loop starts, to define and setup the loop variable.
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it
+evaluates to true. When condition is false at the start of the iteration, the loop will stop executing.
+This means if condition starts as false, the loop will never execute.
+The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
+usually used to increment or decrement your the counter.
+
 
 OBJECTS:
 Objects are variables that can contain many values called properties. The properties are written as value pairs:
@@ -223,6 +254,9 @@ var a = [
 ACCESS DATA IN COMPLEX OBJECTS:
 Use both the .dot and []brackets methods:
 "employee" = a.0["firstName"]
+
+
+
 
 To run JS files use node (download www.node.org),
 using the command: node file.js
