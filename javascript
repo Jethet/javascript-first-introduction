@@ -101,6 +101,10 @@ POP: remove and return the LAST value of array:  myArray.pop()
 SHIFT: remove and return the FIRST value of array: myArray.shift()
 UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
 
+SPLICING: Splicing arrays in JavaScript removes a certain part from an array to create a new array,
+made up from the part that was taken out. Example:
+var myArray = [0,1,2,3,4,5,6,7,8,9]; ==> var splice = myArray.splice(3,5); will give:  splice[3,5]
+
 FUNCTIONS are built using:
 function functionName() {
   <what the function does>
@@ -201,8 +205,11 @@ do { ourArray.push(i);
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
 running the code and if this condition is met, the loop will stop. If the condition is not met, the loop will continue.
 
+
 OBJECTS:
-Objects are variables that can contain many values called properties. The properties are written as value pairs:
+Objects are variables that can contain many values called properties, usually used as a data structure similar to a
+dictionary. Objects are initialised with {}: var myObject = {}.
+The properties of objects are written as value pairs:
 name and value separated by a colon. Properties can be numbers or strings.
 If an object has any non-string properties, JavaScript will automatically typecast them as strings.
 
@@ -270,6 +277,12 @@ When the function prompt() is called it is passed a string and it will present t
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
 Example:    var name = prompt('What is your name?');
 
+JavaScript has a Math module which contains more advanced functions:
+    Math.abs      calculates the absolute value of a number
+    Math.exp      calculates e to the power of a number
+    Math.pow(x,y) calculates the result of x to the power of y
+    Math.floor    removes the fraction part from a number
+    Math.random() will give a random number x where 0<=x<1
 
 
 To run JS files use node (download www.node.org),
