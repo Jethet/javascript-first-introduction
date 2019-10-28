@@ -7,6 +7,7 @@ personObject["salary"] = 14000;
 
 console.log(personObject);
 console.log(personObject.lastName);
+console.log(personObject.lastName.length);
 
 for (var member in personObject) {
     if (personObject.hasOwnProperty(member))     {

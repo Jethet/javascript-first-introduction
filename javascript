@@ -46,7 +46,7 @@ LOCAL SCOPE: variables declared in a function are not defined outside that funct
 not visible.
 It is possible to have both local and global variables with the SAME name. In this case the
 local variable takes precedence over the global variable.
-
+---------------------------------------------------------------------------------
 addition (+), subtraction (-), division (/) and multiplication (*) are the same as in Python.
 incrementing (adding) one to a variable is done with ++
 Example: i = i + 1 can be used with the ++ operator and becomes: i++
@@ -65,6 +65,13 @@ examples:
 myVar = myVar * 5; can be written: myVar * 5;
 myVar = myVar / 2; can be written: myVar /= 2;
 
+JavaScript has a Math module which contains more advanced functions:
+    Math.abs      calculates the absolute value of a number
+    Math.exp      calculates e to the power of a number
+    Math.pow(x,y) calculates the result of x to the power of y
+    Math.floor    removes the fraction part from a number
+    Math.random() will give a random number x where 0<=x<1
+---------------------------------------------------------------------------------
 Quotes: using "" for a string means that quotes cause problems. JS uses \ in front of a quoted text:
 "This is how to \"quote\" a quote."
 IMPORTANT: when using single quotes ('') and double quotes (""), for example describing a conversation,
@@ -91,7 +98,7 @@ NOTE: use the += operator to concatenate a string onto the end of an existing st
 over several lines. This means:
 myVar = "This is a very long long long long sentence, including a space because another sentence is added."
 myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
-
+---------------------------------------------------------------------------------
 LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
 myVar[myVar.length - 1];
@@ -104,7 +111,7 @@ UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
 SPLICING: Splicing arrays in JavaScript removes a certain part from an array to create a new array,
 made up from the part that was taken out. Example:
 var myArray = [0,1,2,3,4,5,6,7,8,9]; ==> var splice = myArray.splice(3,5); will give:  splice[3,5]
-
+---------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
   <what the function does>
@@ -118,7 +125,7 @@ console.log("5" + 1);  will result in 51
 This can be useful to find out if a value has a real value, example: console.log(null==0);
 This means that with == JS can CHANGE the type of value.
 If you want to test if a value is PRECISELY equal to the other (or not) use: === and !==
-
+---------------------------------------------------------------------------------
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
 || (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
 
@@ -204,8 +211,7 @@ do { ourArray.push(i);
 } while i < 5;
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
 running the code and if this condition is met, the loop will stop. If the condition is not met, the loop will continue.
-
-
+---------------------------------------------------------------------------------
 OBJECTS:
 Objects are variables that can contain many values called properties, usually used as a data structure similar to a
 dictionary. Objects are initialised with {}: var myObject = {}.
@@ -271,18 +277,13 @@ var a = [
 ACCESS DATA IN COMPLEX OBJECTS:
 Use both the .dot and []brackets methods:
 "employee" = a.0["firstName"]
-
+----------------------------------------------------------------------------------
 PROMPT for input:
 When the function prompt() is called it is passed a string and it will present the user with the string and
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
 Example:    var name = prompt('What is your name?');
 
-JavaScript has a Math module which contains more advanced functions:
-    Math.abs      calculates the absolute value of a number
-    Math.exp      calculates e to the power of a number
-    Math.pow(x,y) calculates the result of x to the power of y
-    Math.floor    removes the fraction part from a number
-    Math.random() will give a random number x where 0<=x<1
+
 
 
 To run JS files use node (download www.node.org),
