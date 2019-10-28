@@ -9,9 +9,9 @@ var i;
 /* ALWAYS FIRST DECLARE A VARIABLE
 AND THEN ASSIGN A VARIABLE */
 
-function charCount() {
-  for (let i = 0; i++) {
-  console.log(i.length());
+function charCount(str) {
+  for (let i = 0; i <= (str.length -1); i++) {
+  console.log(i);
   }
 }
 
