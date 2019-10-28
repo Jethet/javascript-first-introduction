@@ -17,8 +17,8 @@ function multiply(arr, n) {
      return arr[0];
    } else {
      return multiply(arr, n - 1) * arr[n];
+     console.log(arr);
    }
-  console.log(arr);
  }
 
 foo(3);
