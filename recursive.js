@@ -13,13 +13,13 @@ function foo(i) {
 
 
 function multiply(arr, n) {
+   var arr = [0];
    if (n <= 0) {
      return arr[0];
    } else {
      return multiply(arr, n - 1) * arr[n];
-     console.log(arr);
    }
  }
 
 foo(3);
-multiply([1, 2, 3], 6);
+console.log(multiply([1, 2, 3], 6));

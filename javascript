@@ -96,10 +96,10 @@ LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
 myVar[myVar.length - 1];
 ARRAYS: square brackets; indexing possible (also nested indexing)
-PUSH: add new value at end with myArray.push()
-POP: remove and return the last value of array with .pop()
-SHIFT: remove and return the first value of array with .shift()
-UNSHIFT: add a new value as the first value of array with .unshift()
+PUSH: add new value at END:  myArray.push()
+POP: remove and return the LAST value of array:  myArray.pop()
+SHIFT: remove and return the FIRST value of array: myArray.shift()
+UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
 
 FUNCTIONS are built using:
 function functionName() {
@@ -265,6 +265,10 @@ ACCESS DATA IN COMPLEX OBJECTS:
 Use both the .dot and []brackets methods:
 "employee" = a.0["firstName"]
 
+PROMPT for input:
+When the function prompt() is called it is passed a string and it will present the user with the string and
+a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
+Example:    var name = prompt('What is your name?');
 
 
 
