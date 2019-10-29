@@ -62,7 +62,7 @@ myVar -= 5; (returns 0)
 
 This can also be done with multiplication: *  and  division /
 examples:
-myVar = myVar * 5; can be written: myVar * 5;
+myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
 
 JavaScript has a Math module which contains more advanced functions:
@@ -167,14 +167,13 @@ switch(val) {
   case 4:
     result = "4 alone";
 }
-
-
+--------------------------------------------------------------------------------
 IF and ELSE IF and ELSE loops:
 function test (myCondition) {
   if (myCondition) {
      return "It was true";
   } else if (otherCondition) {
-    return "It could be true"
+    return "It could be true";
   } else {
   return "It was false";
   }
@@ -182,16 +181,14 @@ function test (myCondition) {
 The function is executed from TOP to BOTTOM so be careful of what statement comes first.
 
 FOR loop:
-For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3]) {  ....  }
-1 = [initialization];
+For loops are declared with three optional expressions separated by semicolons:
+for (initialization; condition; final-expression) {  ....  }
 The initialization statement is executed only once before the loop starts, to define and setup the loop variable.
-2 = [condition];
 The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it
 evaluates to true. When condition is false at the start of the iteration, the loop will stop executing.
 This means if condition starts as false, the loop will never execute.
-3 = [final-expression]
 The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
-usually used to increment or decrement your the counter. This can be done i++ or i+=2 or i+=3, etc.
+usually used to increment or decrement the counter. This can be done i++ or i+=2 or i+=3, etc.
 Example: for (var i = 0; i < 5; i++) { .... }
 
 WHILE loop:
@@ -206,7 +203,8 @@ A do...while loop will first do one pass of the code inside the loop no matter w
 the loop while the specified condition evaluates to true:
 var ourArray = [];
 var i = 0;
-do { ourArray.push(i);
+do {
+  ourArray.push(i);
   i++;
 } while i < 5;
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
