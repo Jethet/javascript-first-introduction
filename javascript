@@ -5,7 +5,9 @@ use this */
 PRINT with console.log();
 RUN JS file with: node <filename>
 
-JavaScript STATEMENTS END WITH SEMI-COLUMN ;   !!!!
+Use = for assignment: var a = 3
+Use == for comparison: var a == var b  (or != for unequal to)
+Use === to test if a value is PRECISELY the same: var a === var b (or a !== b for not the same)
 ---------------------------------------------------
 
 JS data types: (can all be stored in variables)
