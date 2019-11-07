@@ -116,7 +116,16 @@ FUNCTIONS are built using:
 function functionName() {
   <what the function does>
 }
-Pass values into a function with arguments and use a return statement to send a value back out of a function.
+PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed into the function.
+Pass values into a function with ARGUMENTS and use a return statement to send a value back out of a function.
+
+A variable can receive the value of a function: everything on the right of the = sign is resolved before assigning
+the result to a variable:
+var myVar;
+function myFunc(num) {
+  return (num + 25) / 10;
+}
+myVar = myFunc(15);  ==> this would be 4
 
 JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
 a value to the type it needs, with a confusing set of rules. Example:
