@@ -14,4 +14,4 @@ console.log(thirdList);
 console.log(thirdList.unshift(12));
 console.log(thirdList);
 
-console.log(Math.pow(3, 3))
+console.log(Math.pow(3, 3));
