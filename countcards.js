@@ -8,13 +8,13 @@ function cc(card) {
     case 4:
     case 5:
     case 6:
-    count =+ 1;
-    console.log(count + " Bet");
-    break;
+      count = +1;
+      console.log(count + " Bet");
+      break;
   }
 
   return "Change Me";
 }
 
-cc(5)
-cc(4)
+cc(5);
+cc(4);
