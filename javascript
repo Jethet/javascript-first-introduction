@@ -5,7 +5,9 @@ use this */
 PRINT with console.log();
 RUN JS file with: node <filename>
 
-JavaScript STATEMENTS END WITH SEMI-COLUMN ;   !!!!
+Use = for assignment: var a = 3
+Use == for comparison: var a == var b  (or != for unequal to)
+Use === to test if a value is PRECISELY the same: var a === var b (or a !== b for not the same)
 ---------------------------------------------------
 
 JS data types: (can all be stored in variables)
@@ -62,7 +64,7 @@ myVar -= 5; (returns 0)
 
 This can also be done with multiplication: *  and  division /
 examples:
-myVar = myVar * 5; can be written: myVar * 5;
+myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
 
 JavaScript has a Math module which contains more advanced functions:
@@ -96,12 +98,12 @@ Concatenation: build a new string out of other strings by concatenating (+) them
 NOTE: spaces must be added where needed, within ""
 NOTE: use the += operator to concatenate a string onto the end of an existing string to break a long string
 over several lines. This means:
-myVar = "This is a very long long long long sentence, including a space because another sentence is added."
+myVar = "This is a very long long long long sentence, including a space because another sentence is added. "
 myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
 ---------------------------------------------------------------------------------
 LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
-myVar[myVar.length - 1];
+myVar[myVar.length - 1];          NOTE: first mention variable and then [] brackets with var.length -1 !!
 ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at END:  myArray.push()
 POP: remove and return the LAST value of array:  myArray.pop()
@@ -116,7 +118,16 @@ FUNCTIONS are built using:
 function functionName() {
   <what the function does>
 }
-Pass values into a function with arguments and use a return statement to send a value back out of a function.
+PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed into the function.
+Pass values into a function with ARGUMENTS and use a return statement to send a value back out of a function.
+
+A variable can receive the value of a function: everything on the right of the = sign is resolved before assigning
+the result to a variable:
+var myVar;
+function myFunc(num) {
+  return (num + 25) / 10;
+}
+myVar = myFunc(15);  ==> this would be 4
 
 JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
 a value to the type it needs, with a confusing set of rules. Example:
@@ -167,14 +178,13 @@ switch(val) {
   case 4:
     result = "4 alone";
 }
-
-
+--------------------------------------------------------------------------------
 IF and ELSE IF and ELSE loops:
 function test (myCondition) {
   if (myCondition) {
      return "It was true";
   } else if (otherCondition) {
-    return "It could be true"
+    return "It could be true";
   } else {
   return "It was false";
   }
@@ -182,16 +192,14 @@ function test (myCondition) {
 The function is executed from TOP to BOTTOM so be careful of what statement comes first.
 
 FOR loop:
-For loops are declared with three optional expressions separated by semicolons: for ([1]; [2]; [3]) {  ....  }
-1 = [initialization];
+For loops are declared with three optional expressions separated by semicolons:
+for (initialization; condition; final-expression) {  ....  }
 The initialization statement is executed only once before the loop starts, to define and setup the loop variable.
-2 = [condition];
 The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it
 evaluates to true. When condition is false at the start of the iteration, the loop will stop executing.
 This means if condition starts as false, the loop will never execute.
-3 = [final-expression]
 The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
-usually used to increment or decrement your the counter. This can be done i++ or i+=2 or i+=3, etc.
+usually used to increment or decrement the counter. This can be done i++ or i+=2 or i+=3, etc.
 Example: for (var i = 0; i < 5; i++) { .... }
 
 WHILE loop:
@@ -206,7 +214,8 @@ A do...while loop will first do one pass of the code inside the loop no matter w
 the loop while the specified condition evaluates to true:
 var ourArray = [];
 var i = 0;
-do { ourArray.push(i);
+do {
+  ourArray.push(i);
   i++;
 } while i < 5;
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
