@@ -6,7 +6,7 @@ PRINT with console.log();
 RUN JS file with: node <filename>
 
 Use = for assignment: let a = 3
-Use == for comparison: let a == var b  (or != for unequal to)
+Use == for comparison: let a == let b  (or != for unequal to)
 Use === to test if a value is PRECISELY the same: let a === let b
 (or a !== b for not the same)
 ---------------------------------------------------
@@ -39,6 +39,9 @@ You can declare more variables: let x, y, z; (commas!) assign separately: x = 3;
 A variable that is declared but not initialised has the value 'undefined'
 For a number the result with an undefined variable will be 'NaN' (not a number).
 For a string, the result will be "undefined".
+
+const: a variable which value will be constant. When a const is declared, the value that
+is assigned to const will never change (returns "xxx" is read-only if you try to change).
 
 VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalised
 
