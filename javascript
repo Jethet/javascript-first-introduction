@@ -5,9 +5,10 @@ use this */
 PRINT with console.log();
 RUN JS file with: node <filename>
 
-Use = for assignment: var a = 3
-Use == for comparison: var a == var b  (or != for unequal to)
-Use === to test if a value is PRECISELY the same: var a === var b (or a !== b for not the same)
+Use = for assignment: let a = 3
+Use == for comparison: let a == var b  (or != for unequal to)
+Use === to test if a value is PRECISELY the same: let a === let b
+(or a !== b for not the same)
 ---------------------------------------------------
 
 JS data types: (can all be stored in variables)
@@ -20,7 +21,7 @@ null
 undefined
 
 variables cannot start with a number or contain spaces but $ and _ can be used
-(example: var myName; var _a1b2;)
+(example: let myName; let _a1b2;)
 
 EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
 Null and undefined are values but carry no information.
@@ -28,12 +29,12 @@ Null and undefined are values but carry no information.
 Assignment always goes from right to left. Everything to the right of the
 = operator is resolved before the value is assigned to the variable to the
 left of the operator. Example:
-declaring variables: var a;  var b;
+declaring variables: let a;  let b;
 initialising variables: a = 7;  b = 7;
 assigning a to b: b = a;
 
-It is custom to declare and initialise in the same line: var a = 7;
-You can declare more variables: var x, y, z; (commas!) assign separately: x = 3; y = 5; z = 7; (semi-columns!)
+It is custom to declare and initialise in the same line: let a = 7;
+You can declare more variables: let x, y, z; (commas!) assign separately: x = 3; y = 5; z = 7; (semi-columns!)
 
 A variable that is declared but not initialised has the value 'undefined'
 For a number the result with an undefined variable will be 'NaN' (not a number).
@@ -55,7 +56,7 @@ Example: i = i + 1 can be used with the ++ operator and becomes: i++
 
 Important operators are +=  and  -=  (compound assignments)
 examples:
-var myVar = 1;
+let myVar = 1;
 myVar += 5;
 console.log(myVar); (returns 6)
 
