@@ -107,12 +107,24 @@ Concatenation: build a new string out of other strings by concatenating (+) them
 NOTE: spaces must be added where needed, within ""
 NOTE: use the += operator to concatenate a string onto the end of an existing string to break a long string
 over several lines. This means:
-myVar = "This is a very long long long long sentence, including a space because another sentence is added. "
-myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
+myVar = "This is a very long long long long sentence, including a space because another
+sentence is added. " myVar += "This part is added after the first part."
+THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
 ---------------------------------------------------------------------------------
-LENGTH: with myVar.length you can calculate the length of a string.
-INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
-myVar[myVar.length - 1];          NOTE: first mention variable and then [] brackets with let.length -1 !!
+STRING METHODS to manipulate strings:
+.length:      with myVar.length you can calculate the length of a string.
+index[]:      to find a specific instance in a string: myVar[1] for the second
+              character. Get last char with myVar[myVar.length - 1];
+              NOTE: first mention variable and then [] brackets with let.length -1 !!
+.toUpperCase: returns uppercased version of string on which this method is applied.
+.charAt(X):   shows the character on the Xth position in the string, counting from 0.
+.indexOf(substr):  returns index of character or string occurrence in a main string.
+.includes():  case-sensitive search to find particular pattern in a string (true or false).
+.substring(start, end):    extracts characters from a string between two points, NOT
+                           including 'end' point, and returns new string.
+.slice(start, end):        extracts characters from a string between two points, NOT
+                           including 'end', and returns new string without altering original.
+
 ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at END:  myArray.push()
 POP: remove and return the LAST value of array:  myArray.pop()
