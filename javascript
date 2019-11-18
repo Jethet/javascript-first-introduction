@@ -35,21 +35,24 @@ assigning a to b: b = a;
 
 It is custom to declare and initialise in the same line: let a = 7;
 You can declare more variables: let x, y, z; (commas!) assign separately: x = 3; y = 5; z = 7; (semi-columns!)
-
+Before, var was used but this has no scope constraints while let has scope constraints:
+let is constrained to whichever scope it is declared in.
 A variable that is declared but not initialised has the value 'undefined'
 For a number the result with an undefined variable will be 'NaN' (not a number).
 For a string, the result will be "undefined".
+Also, let cannot be used to re-declare a variable and will return: 'Identifier has
+already been declared'.
 
 const: a variable which value will be constant. When a const is declared, the value that
 is assigned to const will never change (returns "xxx" is read-only if you try to change).
 Declaring a const communicates and guarantees this variable will never be changed.
 Syntax: declare full variable info ==> const name = "Ada"; (NOT with 'let').
+WHERE POSSIBLE, CONST is PREFERRED over LET or VAR.
 
 VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalised
 
-GLOBAL SCOPE: variables which are defined outside of a function block have Global scope, i.e.
-they can be seen everywhere in the JavaScript code. Variables used WITHOUT THE VAR are
-automatically created in global scope. It is important to use var when declaring a variable.
+GLOBAL SCOPE: variables which are defined with var outside of a function block have Global
+scope, i.e. they can be seen everywhere in the JavaScript code. It is important to use var when declaring a variable.
 LOCAL SCOPE: variables declared in a function are not defined outside that function, i.e.
 not visible.
 It is possible to have both local and global variables with the SAME name. In this case the
@@ -109,7 +112,7 @@ myVar += "This part is added after the first part."  THESE TWO STRINGS WILL BE J
 ---------------------------------------------------------------------------------
 LENGTH: with myVar.length you can calculate the length of a string.
 INDEX: use [] to find a specific instance in a string: myVar[1] for the second character. Last char with
-myVar[myVar.length - 1];          NOTE: first mention variable and then [] brackets with var.length -1 !!
+myVar[myVar.length - 1];          NOTE: first mention variable and then [] brackets with let.length -1 !!
 ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at END:  myArray.push()
 POP: remove and return the LAST value of array:  myArray.pop()
@@ -118,7 +121,7 @@ UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
 
 SPLICING: Splicing arrays in JavaScript removes a certain part from an array to create a new array,
 made up from the part that was taken out. Example:
-var myArray = [0,1,2,3,4,5,6,7,8,9]; ==> var splice = myArray.splice(3,5); will give:  splice[3,5]
+let myArray = [0,1,2,3,4,5,6,7,8,9]; ==> let splice = myArray.splice(3,5); will give:  splice[3,5]
 ---------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
@@ -129,7 +132,7 @@ Pass values into a function with ARGUMENTS and use a return statement to send a 
 
 A variable can receive the value of a function: everything on the right of the = sign is resolved before assigning
 the result to a variable:
-var myVar;
+let myVar;
 function myFunc(num) {
   return (num + 25) / 10;
 }
@@ -206,11 +209,11 @@ evaluates to true. When condition is false at the start of the iteration, the lo
 This means if condition starts as false, the loop will never execute.
 The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
 usually used to increment or decrement the counter. This can be done i++ or i+=2 or i+=3, etc.
-Example: for (var i = 0; i < 5; i++) { .... }
+Example: for (let i = 0; i < 5; i++) { .... }
 
 WHILE loop:
-var ourArray = [];
-var i = 0;
+let ourArray = [];
+let i = 0;
 while(i < 5) {
   ourArray.push(i);   ==> this adds i to ourArray[]
   i++;                ==> this iterates until i === 5
@@ -218,8 +221,8 @@ while(i < 5) {
 DO .. WHILE loop:
 A do...while loop will first do one pass of the code inside the loop no matter what, and then continue to run
 the loop while the specified condition evaluates to true:
-var ourArray = [];
-var i = 0;
+let ourArray = [];
+let i = 0;
 do {
   ourArray.push(i);
   i++;
@@ -229,7 +232,7 @@ running the code and if this condition is met, the loop will stop. If the condit
 ---------------------------------------------------------------------------------
 OBJECTS:
 Objects are variables that can contain many values called properties, usually used as a data structure similar to a
-dictionary. Objects are initialised with {}: var myObject = {}.
+dictionary. Objects are initialised with {}: let myObject = {}.
 The properties of objects are written as value pairs:
 name and value separated by a colon. Properties can be numbers or strings.
 If an object has any non-string properties, JavaScript will automatically typecast them as strings.
@@ -237,27 +240,27 @@ If an object has any non-string properties, JavaScript will automatically typeca
 ACCESS DATA IN OBJECTS:
 The data in objects can be accessed through what are called properties either with dot notation or indexing.
 Dot notation can be used if the name of the property to be accessed is known:
-var myObj = {
+let myObj = {
   prop1: "val1",
   prop2: "val2"
 };
-var prop1val = myObj.prop1;   (to access "val1")
-var prop2val = myObj.prop2;   (to access "val2")
+let prop1val = myObj.prop1;   (to access "val1")
+let prop2val = myObj.prop2;   (to access "val2")
 
 The second way to access the properties of an object is bracket notation ([]). If the property of the object
 has a space in its name, bracket notation must be used to access it. It is also possible to use bracket notation
 on object properties without spaces. Note: the property with spaces must be between quotes.
-var testObj = {
+let testObj = {
   "an entree": "hamburger",
   "my side": "veggies",
   "the drink": "water"
 };
-var entreeValue = testObj["an entree"];     (to access "hamburger")
-var drinkValue = testObj["the drink"];      (to access "water")
+let entreeValue = testObj["an entree"];     (to access "hamburger")
+let drinkValue = testObj["the drink"];      (to access "water")
 NOTE: Another use of bracket notation on objects is to access a property which is stored as the value of a variable.
 This can be very useful for iterating through an object's properties or when accessing a lookup table.
-It is possible to assign a variable to a property (e.g. var X = firstName, a property from var objExample), and then
-access this property: var Y = objExample[X];.
+It is possible to assign a variable to a property (e.g. let X = firstName, a property from let objExample), and then
+access this property: let Y = objExample[X];.
 UPDATE or ADD PROPERTIES:
 After creating a JavaScript object, its properties can be updated by using either dot or bracket notation:
 myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
@@ -268,16 +271,17 @@ LOOKUP DATA using OBJECTS:
 Objects can be considered as key value pairs: property and value (as in dictionary). This can be used to find data.
 Use object name plus brackets with property (key): myObject[newName]
 A variable can be assigned to another variable and this can also be used to lookup data:
-var a = {1:"one", 2:"two", 3:"three"}   var result = var number[val]   result = number[2]  ==> gives "two"
+let a = {1:"one", 2:"two", 3:"three"}   let result = let number[val]   result = number[2]  ==> gives "two"
 
 DETERMINE PROPERTY:
 Use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
 .hasOwnProperty() returns true or false if the property is found or not.
 
 COMPLEX OBJECTS:
-A var can have a complex structure, for example a var array which contains objects and these objects have various
-properties in key/value format. These properties can be strings, numbers or arrays. This means that:
-var a = [
+A variable can have a complex structure, for example an array which contains objects
+and these objects have various properties in key/value format. These properties can
+be strings, numbers or arrays. This means that:
+let a = [
   {
   "firstName": "John",
   "lastName": "Baker"
@@ -296,7 +300,7 @@ Use both the .dot and []brackets methods:
 PROMPT for input:
 When the function prompt() is called it is passed a string and it will present the user with the string and
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
-Example:    var name = prompt('What is your name?');
+Example:    let name = prompt('What is your name?');
 
 ----------------------------------------------------------------------------------
 ERROR MESSAGE RE. ES6:

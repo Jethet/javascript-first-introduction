@@ -16,3 +16,5 @@ console.log(food);
 favouriteFood = "salad";
 food = "patatas bravas";
 console.log(food, favouriteFood);
+
+console.log("Value: ",favouriteFood,"Type: ", typeof favouriteFood);
