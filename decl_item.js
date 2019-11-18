@@ -9,3 +9,10 @@ console.log(course, age, name, job);
 
 let favouriteFood;
 console.log(favouriteFood);
+
+let food = "veggies";
+console.log(food);
+
+favouriteFood = "salad";
+food = "patatas bravas";
+console.log(food, favouriteFood);

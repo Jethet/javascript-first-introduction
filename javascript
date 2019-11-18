@@ -42,6 +42,8 @@ For a string, the result will be "undefined".
 
 const: a variable which value will be constant. When a const is declared, the value that
 is assigned to const will never change (returns "xxx" is read-only if you try to change).
+Declaring a const communicates and guarantees this variable will never be changed.
+Syntax: declare full variable info ==> const name = "Ada"; (NOT with 'let').
 
 VARIABLE NAMES should be camelCase: first word lowercase, subsequent words are capitalised
 
