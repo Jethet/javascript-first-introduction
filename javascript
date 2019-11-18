@@ -293,8 +293,13 @@ When the function prompt() is called it is passed a string and it will present t
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
 Example:    var name = prompt('What is your name?');
 
-
-
+----------------------------------------------------------------------------------
+ERROR MESSAGE RE. ES6:
+JSHint has to be configured with a .jshintrc file in the project’s root directory.
+Simply create a .jshintrc file there with the following object:
+{
+  "esversion": 6
+}
 
 To run JS files use node (download www.node.org),
 using the command: node file.js
