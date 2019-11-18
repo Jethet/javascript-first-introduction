@@ -30,6 +30,7 @@ let sentence = "This is one meaningless sentence which needs to be cut in half."
 console.log(sentence.length);
 console.log(sentence.slice(0,32));
 console.log(sentence.slice(32, 63));
+
 /* Capitalize:
 a) the whole name of the city where you are now
 b) the first letter of the city
@@ -37,3 +38,7 @@ c) capitalize the middle letter if the city has an odd number of letters or
 two middle letters if the city has even number of letters
 (hint: you can use .charAt() and .slice())
 */
+let city = "Barcelona";
+console.log(city.toUpperCase());
+console.log(city[0].toUpperCase());
+console.log(city[4].toUpperCase());
