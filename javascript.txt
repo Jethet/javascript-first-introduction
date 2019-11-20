@@ -257,7 +257,12 @@ stop. If the condition is not met, the loop will continue.
 
 FOREACH  (forEach) loops:
 forEach iterates through the array and has access to each element, and is more readable.
-
+In ES5 (option 1):
+myArray.forEach(function(whatever){
+  console.log(`This is ${whatever}`)
+});
+===> the closing bracket comes last!! the curly braces are INSIDE of the brackets
+     of the function
 
 ----------------------------------------------------------------------------------
 OBJECTS:
