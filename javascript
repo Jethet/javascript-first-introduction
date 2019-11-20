@@ -130,10 +130,19 @@ PUSH: add new value at END:  myArray.push()
 POP: remove and return the LAST value of array:  myArray.pop()
 SHIFT: remove and return the FIRST value of array: myArray.shift()
 UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
+THESE METHODS CAN ALSO BE USED FOR ARRAYS !
 
-SPLICING: Splicing arrays in JavaScript removes a certain part from an array to create a new array,
-made up from the part that was taken out. Example:
-let myArray = [0,1,2,3,4,5,6,7,8,9]; ==> let splice = myArray.splice(3,5); will give:  splice[3,5]
+SPLICING: Splicing arrays in JavaScript removes a certain part from an array and/or
+adds a new element in the array. The index (starting at 0) indicates WHERE the
+removal/addition will be. Syntax is: myArray.splice(1, 2) ==> on index 1 position
+two elements will be removed: element on position 1 and 2.
+Using splice to add: myArray.splice(2, 0, "addition") ==> on index 2 position,
+no element is removed and a new element is added after it (so on index 3).
+Using splice to replace: myArray.splice(2, 1, "replace") ==> on index 2 position,
+the element is deleted and "replace" is put in position index 2.
+The deleted element(s) can be put into a variable:
+let myArray = [0,1,2,3,4,5,6,7,8,9]; ==> let mySplice = myArray.splice(3,5);
+will give:  mySplice = (3,4,5,6,7,8,9)
 ---------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
