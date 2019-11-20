@@ -115,7 +115,7 @@ STRING METHODS to manipulate strings:
 .length:      with myVar.length you can calculate the length of a string.
 index[]:      to find a specific instance in a string: myVar[1] for the second
               character. Get last char with myVar[myVar.length - 1];
-              NOTE: first mention variable and then [] brackets with let.length -1 !!
+              NOTE: first mention variable and then [] brackets with let .length -1 !!
 .toUpperCase: returns uppercased version of string on which this method is applied.
 .charAt(X):   shows the character on the Xth position in the string, counting from 0.
 .indexOf(substr):  returns index of character or string occurrence in a main string.
