@@ -2,8 +2,17 @@
 
 -  Use backticks: ``
 
--  Text between backticks is regarded as a STRING
+-  Text between backticks is regarded as a STRING.
 
--  Add a variable using the $ sign followed by {}: ${variable}
+-  Add a placeholder {} using the $ sign:   ${expression}
 
 -  Use template literals also for code: console.log(`Three plus six is ${3+6}.`);
+
+- The expression in the placeholder and the text between the backticks `` get passed
+  into a function.
+
+- The function concatenates the parts into a single string: Three plus six is 9.
+
+- Multi-line strings can be written over separate lines, no \n or other syntax needed.
+
+-
