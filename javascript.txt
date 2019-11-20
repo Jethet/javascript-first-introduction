@@ -167,9 +167,10 @@ This can be useful to find out if a value has a real value, example: console.log
 This means that with == JS can CHANGE the type of value.
 If you want to test if a value is PRECISELY equal to the other (or not) use: === and !==
 ---------------------------------------------------------------------------------
+CONDITIONALS:
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
 || (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
-
+---------------------------------------------------------------------------------
 SWITCH STATEMENT can be used to handle many options to choose from. A switch statement tests a value and can
 have many case statements which define various possible values. Statements are executed from the first matched
 case value until a break is encountered:
@@ -208,7 +209,7 @@ switch(val) {
   case 4:
     result = "4 alone";
 }
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 IF and ELSE IF and ELSE loops:
 function test (myCondition) {
   if (myCondition) {
@@ -224,13 +225,15 @@ The function is executed from TOP to BOTTOM so be careful of what statement come
 FOR loop:
 For loops are declared with three optional expressions separated by semicolons:
 for (initialization; condition; final-expression) {  ....  }
-The initialization statement is executed only once before the loop starts, to define and setup the loop variable.
-The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it
-evaluates to true. When condition is false at the start of the iteration, the loop will stop executing.
+The initialization statement is executed only once before the loop starts, to define
+and setup the loop variable.
+The condition statement is evaluated at the beginning of every loop iteration, and
+will continue for as long as it evaluates to true. When condition is false at the start
+of the iteration, the loop will stop executing.
 This means if condition starts as false, the loop will never execute.
-The final-expression is executed at the end of each loop iteration, prior to the next condition check and is
-usually used to increment or decrement the counter. This can be done i++ or i+=2 or i+=3, etc.
-Example: for (let i = 0; i < 5; i++) { .... }
+The final-expression is executed at the end of each loop iteration, prior to the next
+condition check and is usually used to increment or decrement the counter. This can be
+done i++ or i+=2 or i+=3, etc.  Example: for (let i = 0; i < 5; i++) { .... }
 
 WHILE loop:
 let ourArray = [];
@@ -240,17 +243,23 @@ while(i < 5) {
   i++;                ==> this iterates until i === 5
 }
 DO .. WHILE loop:
-A do...while loop will first do one pass of the code inside the loop no matter what, and then continue to run
-the loop while the specified condition evaluates to true:
+A do...while loop will first do one pass of the code inside the loop no matter what,
+and then continue to run the loop while the specified condition evaluates to true:
 let ourArray = [];
 let i = 0;
 do {
   ourArray.push(i);
   i++;
 } while i < 5;
-Important: a do .. while loop ensures that the code inside the loop runs at least ONCE. The condition comes after
-running the code and if this condition is met, the loop will stop. If the condition is not met, the loop will continue.
----------------------------------------------------------------------------------
+Important: a do .. while loop ensures that the code inside the loop runs at least ONCE.
+The condition comes after running the code and if this condition is met, the loop will
+stop. If the condition is not met, the loop will continue.
+
+FOREACH  (forEach) loops:
+forEach iterates through the array and has access to each element, and is more readable.
+
+
+----------------------------------------------------------------------------------
 OBJECTS:
 Objects are variables that can contain many values called properties, usually used as a data structure similar to a
 dictionary. Objects are initialised with {}: let myObject = {}.
