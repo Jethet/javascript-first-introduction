@@ -1,0 +1,9 @@
+-  template = preset format    literal = value written as it should be interpreted
+
+-  Use backticks: ``
+
+-  Text between backticks is regarded as a STRING
+
+-  Add a variable using the $ sign followed by {}: ${variable}
+
+-  Use template literals also for code: console.log(`Three plus six is ${3+6}.`);
