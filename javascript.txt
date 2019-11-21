@@ -262,10 +262,10 @@ let myObj = {
 let prop1val = myObj.prop1;   (to access "val1")
 let prop2val = myObj.prop2;   (to access "val2")
 
-The second way to access the properties of an object is indexing (brackets []).
+The second way to access the properties of an object is indexing (brackets [""]).
 If the property of the object has a space in its name, bracket notation must be
 used to access it. It is also possible to use bracket notation on object properties
-with spaces. Note: the property with spaces must be between quotes:
+with spaces. Note: the property with spaces must be between QUOTES:
 let testObj = {
   "an entree": "hamburger",
   "my side": "veggies",
@@ -284,12 +284,26 @@ let a = {1:"one", 2:"two", 3:"three"}
 let result = let number[val]
 result = number[2]  ==> returns "two"
 
-UPDATE or ADD PROPERTIES:
+UPDATE - ADD - DELETE  PROPERTIES:
 After creating a JavaScript object, its properties can be updated by using either
 dot or bracket notation:
 myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
 ADDING properties works the same way: myObject.newProperty = "A new property"
-DELETE PROPERTIES with 'delete':  delete myObject.newProperty
+DELETE PROPERTIES with 'delete' and space:  delete myObject.newProperty
+
+OBJECT METHODS:
+Object.keys(name-of-object);  this returns a list of all keys (= all properties)
+
+LOOPING OVER OBJECTS
+get all keys with: for(let key in name-of-object){    (NOTE: let key !!)
+                              console.log(key);
+                              }
+get all values with: for(let key in name-of-object){
+                              console.log(name-of-object[key]);       (NOTE: use brackets !!)
+                              }
+get key and values with: for(let key in name-of-object){
+                              console.log(`Key ${key} with value ${name-of-object[key]}`)
+                              }
 
 DETERMINE PROPERTY:
 Use the .hasOwnProperty(propname) method of objects to determine if that object
