@@ -244,15 +244,17 @@ myArray.forEach(function(whatever){
 
 ----------------------------------------------------------------------------------
 OBJECTS:
-Objects are variables that can contain many values called properties, usually used as a data structure similar to a
-dictionary. Objects are initialised with {}: let myObject = {}.
-The properties of objects are written as value pairs:
-name and value separated by a colon. Properties can be numbers or strings.
-If an object has any non-string properties, JavaScript will automatically typecast them as strings.
+Objects are variables that can contain many values called properties, usually used as
+data structure similar to a dictionary. Objects are initialised with {}: let myObject = {}.
+The properties of objects are written as value pairs i.e. name and value separated by
+a colon (name: value).
+Properties can be numbers or strings. If an object has any non-string properties,
+JavaScript will automatically typecast them as strings.
 
 ACCESS DATA IN OBJECTS:
-The data in objects can be accessed through what are called properties either with dot notation or indexing.
-Dot notation can be used if the name of the property to be accessed is known:
+The data in objects can be accessed through the properties, either with dot notation
+or indexing. Dot notation can be used if the name of the property to be accessed
+is known:
 let myObj = {
   prop1: "val1",
   prop2: "val2"
@@ -260,9 +262,10 @@ let myObj = {
 let prop1val = myObj.prop1;   (to access "val1")
 let prop2val = myObj.prop2;   (to access "val2")
 
-The second way to access the properties of an object is bracket notation ([]). If the property of the object
-has a space in its name, bracket notation must be used to access it. It is also possible to use bracket notation
-on object properties without spaces. Note: the property with spaces must be between quotes.
+The second way to access the properties of an object is indexing (brackets []).
+If the property of the object has a space in its name, bracket notation must be
+used to access it. It is also possible to use bracket notation on object properties
+with spaces. Note: the property with spaces must be between quotes:
 let testObj = {
   "an entree": "hamburger",
   "my side": "veggies",
@@ -270,24 +273,27 @@ let testObj = {
 };
 let entreeValue = testObj["an entree"];     (to access "hamburger")
 let drinkValue = testObj["the drink"];      (to access "water")
-NOTE: Another use of bracket notation on objects is to access a property which is stored as the value of a variable.
-This can be very useful for iterating through an object's properties or when accessing a lookup table.
-It is possible to assign a variable to a property (e.g. let X = firstName, a property from let objExample), and then
-access this property: let Y = objExample[X];.
-UPDATE or ADD PROPERTIES:
-After creating a JavaScript object, its properties can be updated by using either dot or bracket notation:
-myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
-Adding properties works the same way: myObject.newProperty = "A new property"
-DELETE PROPERTIES: use 'delete':  delete myObject.newProperty
 
-LOOKUP DATA using OBJECTS:
-Objects can be considered as key value pairs: property and value (as in dictionary). This can be used to find data.
-Use object name plus brackets with property (key): myObject[newName]
-A variable can be assigned to another variable and this can also be used to lookup data:
-let a = {1:"one", 2:"two", 3:"three"}   let result = let number[val]   result = number[2]  ==> gives "two"
+NOTE: Another use of bracket notation on objects is to access a property which is
+stored as the value of a variable. This can be very useful for iterating through
+an object's properties or when accessing a lookup table.
+It is possible to assign a variable to a property: let X = firstName, a property
+from let objExample), then access this property: let Y = objExample[X];.
+A variable can be assigned to another variable and this can be used to lookup data:
+let a = {1:"one", 2:"two", 3:"three"}
+let result = let number[val]
+result = number[2]  ==> returns "two"
+
+UPDATE or ADD PROPERTIES:
+After creating a JavaScript object, its properties can be updated by using either
+dot or bracket notation:
+myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
+ADDING properties works the same way: myObject.newProperty = "A new property"
+DELETE PROPERTIES with 'delete':  delete myObject.newProperty
 
 DETERMINE PROPERTY:
-Use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
+Use the .hasOwnProperty(propname) method of objects to determine if that object
+has the given property name.
 .hasOwnProperty() returns true or false if the property is found or not.
 
 COMPLEX OBJECTS:
