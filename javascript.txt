@@ -244,10 +244,10 @@ myArray.forEach(function(whatever){
 
 ----------------------------------------------------------------------------------
 OBJECTS:
-Objects are variables that can contain many values called properties, usually used as
-data structure similar to a dictionary. Objects are initialised with {}: let myObject = {}.
-The properties of objects are written as value pairs i.e. name and value separated by
-a colon (name: value).
+Objects are collections of values called properties, in a data structure similar to
+a dictionary. Objects are initialised with {}: let myObject = {}.
+The properties of objects are written as key-value pairs i.e. name and value separated
+by a column (name: value) and with , between the property lines.
 Properties can be numbers or strings. If an object has any non-string properties,
 JavaScript will automatically typecast them as strings.
 
