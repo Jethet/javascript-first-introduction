@@ -304,6 +304,9 @@ get all values with: for(let key in name-of-object){
 get key and values with: for(let key in name-of-object){
                               console.log(`Key ${key} with value ${name-of-object[key]}`)
                               }
+IN operator:
+The in operator is used to verify if a certain property exists in an object;
+it returns true or false:  console.log("prop" in name-of-object);
 
 DETERMINE PROPERTY:
 Use the .hasOwnProperty(propname) method of objects to determine if that object

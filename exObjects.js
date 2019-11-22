@@ -23,7 +23,7 @@ console.log(Object.keys(olympicRecords));
 for (let key in olympicRecords){
   console.log(key);
 }
-*/
+
 for (let key in olympicRecords){
   console.log(olympicRecords[key]);
 }
@@ -31,3 +31,8 @@ for (let key in olympicRecords){
 for (let key in olympicRecords){
   console.log(`Property/key: ${key} <==> value: ${olympicRecords[key]}`);
 }
+*/
+console.log("HorseJump" in olympicRecords);
+console.log(olympicRecords.swimming100Women = "Strong Woman");
+console.log(olympicRecords.running100Women = "Super Woman");
+console.log(olympicRecords);
