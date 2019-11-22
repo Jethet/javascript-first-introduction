@@ -1,23 +1,25 @@
 let product = {
     name: "headphones",
-    price: 100
+    price: 100,
+    discount: "10%"
 };
 
-if (product.price > 100){
-  let discount = 10 / 100;
-  let discPrice = product.price - (product.price * discount);
-  product.price = discPrice;
-  product.discount = discount;
-} else {
-  discount = 7 / 100;
-  discPrice = product.price - (product.price * discount);
-  product.price = discPrice;
-  product.discount = discount;
+for (let key in product){
+  if ("discount" in product === true){
+    console.log(`Already discounted by ${product.discount}.`);
+    break;
+  }
+    else if (product.price > 100){
+    let discount = 10 / 100;
+    let discPrice = product.price - (product.price * discount);
+    product.price = discPrice;
+    product.discount = discount;
+    } else {
+    discount = 7 / 100;
+    discPrice = product.price - (product.price * discount);
+    product.price = discPrice;
+    product.discount = discount;
+  }
 }
 
-console.log(product.price);
 console.log(product);
-
-if ("discount" in product){
-  console.log(`Already discounted by ${discount}.`);
-}
