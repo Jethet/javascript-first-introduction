@@ -369,6 +369,7 @@ function myFunc(num) {
 }
 myVar = myFunc(15);  ==> this would be 4
 NOTE: semi-columns used everywhere
+If, else if, for and switch can all be used inside a function.
 
 JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
 a value to the type it needs, with a confusing set of rules. Example:
