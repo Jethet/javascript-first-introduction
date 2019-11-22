@@ -1,4 +1,4 @@
-/*const theseObj = [
+const theseObj = [
     {
       prop1: "One",
       prop2: "Two",
@@ -16,7 +16,7 @@ let propAdd = {
 
 theseObj.push(propAdd);
 console.log(theseObj);
-*/
+
 /* Using the given array of objects:
         display price of iPhone,
         display both phones’ names,
