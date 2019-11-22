@@ -18,22 +18,35 @@ let propAdd = {
 theseObj.push(propAdd);
 console.log(theseObj);
 console.log(theseObj[1].prop2[0]);*/
-let currentGroup = {
-  course: "Web Development",
-  type: "full-time",
-  squadName: "squad-307",
-  city: "Miami",
-  teacher: {
-    name: "Nick",
-    age: 27
-  },
-  classroom: {
-    floor: 3,
-    seats: 30,
-    available: true
-  }
+let basic = {
+  language: "JavaScript",
+  frameworks: [
+    {
+      end: "back",
+      list: [
+        {
+          name: "ExpressJS",
+          released: 2010
+        },
+        {
+          name: "MeteorJS",
+          released: 2012
+        }
+      ]
+    },
+    {
+      end: "front",
+      list: [
+        {
+          name: "ReactJS",
+          released: 2013
+        },
+        {
+          name: "VueJS",
+          released: 2014
+        }
+      ]
+    }
+  ]
 };
-console.log(currentGroup);
-console.log(currentGroup.teacher);
-console.log(currentGroup.teacher.age);
-console.log(currentGroup.classroom.available);
+console.log(basic.frameworks);
