@@ -355,7 +355,8 @@ theseObj[0].prop1 ==> returns: "One"
 ---------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
-  <what the function does>
+  <what the function does>;
+  <optional: return; ==> this ends the function immediately!>
 }
 PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed into the function.
 Pass values into a function with ARGUMENTS and use a return statement to send a value back out of a function.
