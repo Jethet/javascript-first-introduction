@@ -5,7 +5,7 @@ let product = {
 };
 
 for (let key in product){
-  if ("discount" in product === true){
+  if (key === "discount"){
     console.log(`Already discounted by ${product.discount}.`);
     break;
   }
@@ -13,13 +13,12 @@ for (let key in product){
     let discount = 10 / 100;
     let discPrice = product.price - (product.price * discount);
     product.price = discPrice;
-    product.discount = discount;
     } else {
     discount = 7 / 100;
     discPrice = product.price - (product.price * discount);
     product.price = discPrice;
-    product.discount = discount;
   }
+  product.discount = discount;
 }
 
 console.log(product);
