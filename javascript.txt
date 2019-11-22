@@ -333,6 +333,26 @@ ACCESS DATA IN COMPLEX OBJECTS:
 Use both the .dot and []brackets methods:
 "employee" = a.0["firstName"]
 ---------------------------------------------------------------------------------
+NESTED DATA STRUCTURES: arrays & objects
+This is about organising data: const myObject = {     const secObject = {
+                                  prop1: "One",          prop1: "Word",
+                                  prop2: "Two"           prop2: "sentence"
+This can be an array: []            }                      }
+const theseObj = [
+  {
+    {prop1: "One",
+    prop2: "Two"},
+    },
+    {prop1: "Word",
+    prop2: "Sentence"
+    }
+  ]
+ACCESS DATA from an array of objects:
+theseObj[0]  ==> returns: prop1: "One", prop2: "Two"
+theseObj[0].prop1 ==> returns: "One"
+
+
+---------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
   <what the function does>
