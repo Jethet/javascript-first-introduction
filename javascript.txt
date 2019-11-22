@@ -368,6 +368,7 @@ function myFunc(num) {
   return (num + 25) / 10;
 }
 myVar = myFunc(15);  ==> this would be 4
+NOTE: semi-columns used everywhere
 
 JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
 a value to the type it needs, with a confusing set of rules. Example:
