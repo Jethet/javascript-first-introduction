@@ -4,14 +4,13 @@ create the highest possible number.
 Examples: input: 21445    output: 54421*/
 
 function descend(number) {
-  var number = []
-  for (let i = 0; i <= numbers.length; i++) {
+  var numb = [];
+  for (let i = 0; i <= number.length; i++) {
     if (i > number[0]) {
-      number.add(i);
+      numb.add(i);
         i++;
     } else {
-      return number;
-      console.log(number);
+      console.log(numb);
     }
   }
 }

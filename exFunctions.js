@@ -1,4 +1,4 @@
-/*function sayHello(language){
+function sayHello(language){
     switch(language){
         case "fr":
             console.log("bonjour!");
@@ -18,7 +18,7 @@ function printResult(){
     result = multiplyNumbers(3,6);
     console.log(`The result is ${result}`);
 }
-printResult(); */
+printResult();
 
 // Calculator function:
 function calculateNumbers (num1, num2, operator){
