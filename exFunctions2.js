@@ -4,7 +4,6 @@ function arraySum(array){
          result += array[i];
     }         
     console.log("$" + `${result}`);
-
 }
 
 const prices = arraySum([5, 7.99, 9.99, 0.99, 21]);
