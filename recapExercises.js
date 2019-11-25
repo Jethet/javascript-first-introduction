@@ -15,6 +15,21 @@ function printType(array){
         console.log(typeof array[i]); 
     }
 }
-    
-
 */
+
+// Define a function getCredentials() that will receive the following object
+// as argument and print the following result:
+
+let user = {
+  username: "ironhacker",
+  password: "123iron345"
+}
+
+// => expected output:
+// Username is: ironhacker and the password is: 123iron345.
+
+function getCredentials(user){
+    console.log(`Username is: ${user.username} and the password is: ${user.password}.`)
+}
+
+getCredentials(user);
