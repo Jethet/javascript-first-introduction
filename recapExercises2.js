@@ -8,7 +8,7 @@
         lastName: "Doe",
         age: 44
       },
-      isForSale: true,
+      isForSale: false,
       sqrm: 120,
       address: {
         street: "Happy St",
@@ -18,11 +18,19 @@
         country: "US"
       },
       amenities: ["pool", "tennis court", "private parking", "yard"]
+    };
+    
+   function checkProperty(){
+       if (property.isForSale === true){
+           console.log(`The owner, ${property.owner.firstName} ${property.owner.lastName} put the home for sale! The property has ${property.amenities.length} amenities.`);
+       } else {
+           console.log(`The home in ${property.address.street} ${property.address.number} is not for sale.`);
+       }
     }
-    
-    
-    // YOUR CODE HERE
-    
+   
+   
+   checkProperty(property);
+
    /* The output: if the property isForSale equals to true, the expected output 
    to the console should be: 
    The owner, John Doe put the home for sale! The property has 4 amenities. 

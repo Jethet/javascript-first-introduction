@@ -23,13 +23,14 @@ function printType(array){
 let user = {
   username: "ironhacker",
   password: "123iron345"
-}
+};
 
 // => expected output:
 // Username is: ironhacker and the password is: 123iron345.
 
-function getCredentials(user){
-    console.log(`Username is: ${user.username} and the password is: ${user.password}.`)
+function getCredentials(){
+    console.log(`Username is: ${user.username} and the password is: ${user.password}.`);
 }
 
 getCredentials(user);
+
