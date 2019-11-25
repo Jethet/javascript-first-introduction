@@ -5,7 +5,16 @@
 const someArr = ["max", 34, true, {name: "sandra", student: true}, 
 ["javascript", "mongodb", "react"]];
 
-function printType(array)
+someArr.forEach(elementType => {
+    console.log(typeof elementType);
+});
+
+/*
+function printType(array){
+    for (let i = 0; i <= someArr.length; i++){      
+        console.log(typeof array[i]); 
+    }
+}
     
 
-printType([someArr]);
+*/
