@@ -49,14 +49,10 @@ function command(thePlayer, orders){
         let order = orders[i];
         switch(order){
             case "l":
-                placeHorizontal(thePlayer, order);
-                break;
             case "r":
                 placeHorizontal(thePlayer, order);
                 break;
             case "u":
-                placeVertical(thePlayer, order);
-                break;
             case "d":
                 placeVertical(thePlayer, order);
                 break;
