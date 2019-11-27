@@ -33,7 +33,7 @@ placeHorizontal(player, "l");
 console.log(playerPath);
 placeHorizontal(player, "l");
 console.log(playerPath);
-/*
+
 function placeVertical(thePlayer, command){
     // move player up
     if (thePlayer.x >=0 && thePlayer.x < 2) {
@@ -52,4 +52,3 @@ function placeVertical(thePlayer, command){
 
 placeVertical(player, "u");
 placeVertical(player, "d");
-*/
