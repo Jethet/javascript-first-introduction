@@ -11,6 +11,8 @@ const player = {
     y:1
 };
 
+let playerPath = [];
+
 function placeHorizontal(thePlayer, command){
     //move player left:
     if(thePlayer.y >= 0 && thePlayer.y<2){
@@ -21,13 +23,17 @@ function placeHorizontal(thePlayer, command){
     // move to the right: add to y property:
         thePlayer.y++;
     }
+    playerPath.push({x: thePlayer.x, y: thePlayer.y});
     console.log(`Player has position: x=${thePlayer.x} and y=${thePlayer.y}`);
     } else {
         console.log("You cannot place player outside of the board.");
     }
 }
 placeHorizontal(player, "l");
-
+console.log(playerPath);
+placeHorizontal(player, "l");
+console.log(playerPath);
+/*
 function placeVertical(thePlayer, command){
     // move player up
     if (thePlayer.x >=0 && thePlayer.x < 2) {
@@ -37,6 +43,7 @@ function placeVertical(thePlayer, command){
         } else {
             thePlayer.x++;
         }
+        playerPath.push({x: thePlayer.x, y: thePlayer.y});
         console.log(`Player has the position x=${thePlayer.x} and y=${thePlayer.x}`);
     } else {
         console.log("You cannot place player outside of the board.");
@@ -45,3 +52,4 @@ function placeVertical(thePlayer, command){
 
 placeVertical(player, "u");
 placeVertical(player, "d");
+*/
