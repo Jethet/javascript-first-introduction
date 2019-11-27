@@ -22,8 +22,8 @@ function moveForward(rover){
     console.log("moveForward was called");
 }
 
-function turnRover(rover, directions){
-    for (i = 0; i <= direction.length; i++){
+function manageRover(rover, directions){
+    for (i = 0; i <= directions.length; i++){
         let direction = directions[i];
         switch(direction){
             case "l":
@@ -39,3 +39,4 @@ function turnRover(rover, directions){
         console.log(`Rover facing direction ${direction}`);
     }
 }
+manageRover(rover, "lrl");
