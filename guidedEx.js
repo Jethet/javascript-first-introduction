@@ -10,4 +10,19 @@ const player = {
     x:1,
     y:1
 };
-
+function placeHorizontal(thePlayer, command){
+    //move player left:
+    if(thePlayer.y >= 0 && thePlayer.y<2){
+        if (command === "1"){
+    //substract from y property:
+            thePlayer.y--;
+    } else {
+    // move to the right: add to y property:
+        thePlayer.y++;
+    }
+    console.log(`Player has position: x=${thePlayer.x} and y=${thePlayer.y}`);
+    } else {
+        console.log("You cannot place player outside of the board.");
+    }
+}
+placeHorizontal(player.y, "2");
