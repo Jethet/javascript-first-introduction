@@ -10,10 +10,11 @@ const player = {
     x:1,
     y:1
 };
+
 function placeHorizontal(thePlayer, command){
     //move player left:
     if(thePlayer.y >= 0 && thePlayer.y<2){
-        if (command === "1"){
+        if (command === "l"){
     //substract from y property:
             thePlayer.y--;
     } else {
@@ -25,4 +26,22 @@ function placeHorizontal(thePlayer, command){
         console.log("You cannot place player outside of the board.");
     }
 }
-placeHorizontal(player.y, "2");
+placeHorizontal(player, "l");
+
+function placeVertical(thePlayer, command){
+    // move player up
+    if (thePlayer.x >=0 && thePlayer.x < 2) {
+        if (command === "u") {
+            thePlayer.x--;
+     //move player down
+        } else {
+            thePlayer.x++;
+        }
+        console.log(`Player has the position x=${thePlayer.x} and y=${thePlayer.x}`);
+    } else {
+        console.log("You cannot place player outside of the board.");
+    }
+}
+
+placeVertical(player, "u");
+placeVertical(player, "d");
