@@ -1,21 +1,25 @@
 
 let rover = {
-    direction: ["N", "S", "E", "W"]
+    direction: "N"
 };
 
 function turnLeft(rover){
-    rover.direction = "W";
- //   console.log(rover.direction);  
+    if (rover.direction === "N"){
+        rover.direction = "W";
+        console.log(rover.direction); 
+    } else if (rover.direction === "W"){
+        rover.direction = "S";
+        console.log(rover.direction); 
+    } else if (rover.direction === "S"){
+        rover.direction = "E";
+        console.log(rover.direction);
+    } else if (rover.direction === "W"){
+            rover.direction = "S";
+            console.log(rover.direction);
+    }
 }
 
-function turnRight(rover){
-    rover.direction = "E";
- //   console.log(rover.direction);
-}
 
-//function moveForward(rover){
- //   console.log("moveForward was called");
-//}
 
 function manageRover(rover, directions){
     for (let i = 0; i <= directions.length; i++){
@@ -37,5 +41,5 @@ function manageRover(rover, directions){
         
     }
 }
-manageRover(rover, "llr");
+manageRover(rover, "ll");
 

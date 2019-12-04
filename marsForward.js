@@ -1,6 +1,6 @@
 
 let rover = {
-    direction: ["N", "S", "E", "W"]
+    direction: "N"
 };
 
 const grid = [
