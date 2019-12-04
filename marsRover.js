@@ -19,7 +19,21 @@ function turnLeft(rover){
     }
 }
 
-
+function turnRight(rover){
+    if (rover.direction === "N"){
+        rover.direction = "E";
+        console.log(rover.direction); 
+    } else if (rover.direction === "E"){
+        rover.direction = "S";
+        console.log(rover.direction); 
+    } else if (rover.direction === "S"){
+        rover.direction = "W";
+        console.log(rover.direction);
+    } else if (rover.direction === "W"){
+            rover.direction = "N";
+            console.log(rover.direction);
+    }
+}
 
 function manageRover(rover, directions){
     for (let i = 0; i <= directions.length; i++){
