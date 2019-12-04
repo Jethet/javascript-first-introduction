@@ -1,6 +1,8 @@
 
 let rover = {
-    direction: "N"
+    direction: "N",
+    x: 0,
+    y: 0
 };
 
 const grid = [
@@ -17,6 +19,21 @@ const grid = [
  ];
 
 function moveForward(rover){
-
-    console.log("moveForward was called");
+    if (rover.x >= 0 && rover.x <= 10 && rover.y <= 0 && rover.y >= 10){
+        if (rover.direction === "N"){
+            rover.y--;
+            console.log(rover.x, rover.y);
+        } else if (rover.direction === "S"){
+            rover.y++;
+            console.log(rover.x, rover.y);
+        } else if (rover.direction === "W"){
+            rover.x--;
+            console.log(rover.x, rover.y);
+        }  else if (rover.direction === "E"){
+            rover.x++;
+            console.log(rover.x, rover.y);
+        } else {
+            console.log("The rover cannot be placed outside the grid.");
+     }
+    }
 }
