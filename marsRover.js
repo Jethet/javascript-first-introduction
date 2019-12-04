@@ -1,12 +1,21 @@
 
 let rover = {
-    direction: "N"
+    direction: ["N", "S", "E", "W"]
 };
 
-
-function moveForward(rover){
-    console.log("moveForward was called");
+function turnLeft(rover){
+    rover.direction = "W";
+ //   console.log(rover.direction);  
 }
+
+function turnRight(rover){
+    rover.direction = "E";
+ //   console.log(rover.direction);
+}
+
+//function moveForward(rover){
+ //   console.log("moveForward was called");
+//}
 
 function manageRover(rover, directions){
     for (let i = 0; i <= directions.length; i++){
@@ -14,16 +23,19 @@ function manageRover(rover, directions){
         switch(direction){
             case "l":
                 turnLeft(rover, direction);
+                console.log(`Rover facing direction ${rover.direction}`);
                 break;
-  //          case "r":
-  //              turnRight(rover, direction);
-  //              break;
-  //          case "f":
-  //              moveForward(rover, direction);
-  //              break;
+            case "r":
+                turnRight(rover, direction);
+                console.log(`Rover facing direction ${rover.direction}`);
+                break;
+//            case "f":
+ //               moveForward(rover, direction);
+   //             break;
+            
         }
-        console.log(`Rover facing direction ${direction}`);
+        
     }
 }
-manageRover(rover, "lrl");
+manageRover(rover, "llr");
 

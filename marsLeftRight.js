@@ -1,10 +1,10 @@
 let rover = {
-    direction: "N"
+    direction: ["N", "S", "E", "W"]
 };
 
 function turnLeft(rover){
-            rover.direction = "W";
-            console.log(rover.direction);  
+        rover.direction = "W";
+        console.log(rover.direction);  
 }
 
 function turnRight(rover){
