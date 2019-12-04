@@ -3,18 +3,6 @@ let rover = {
     direction: "N"
 };
 
-let directions = "";
-
-function turnLeft(rover, directions){
-    if (rover.direction === "N" && directions === "l"){
-            rover.direction === "W";
-            console.log(rover.direction);
-  }   
-}
-
-function turnRight(rover){
-    console.log("turnRight was called");
-}
 
 function moveForward(rover){
     console.log("moveForward was called");
