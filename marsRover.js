@@ -55,5 +55,5 @@ function manageRover(rover, directions){
         
     }
 }
-manageRover(rover, "ll");
+manageRover(rover, "lrrr");
 
