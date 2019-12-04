@@ -1,17 +1,15 @@
-// Rover Object Goes Here
-// ======================
-
-
-
-
-// ======================
 
 let rover = {
     direction: "N"
 };
 
-function turnLeft(rover){
-    console.log("turnLeft was called");
+let directions = "";
+
+function turnLeft(rover, directions){
+    if (rover.direction === "N" && directions === "l"){
+            rover.direction === "W";
+            console.log(rover.direction);
+  }   
 }
 
 function turnRight(rover){
@@ -23,20 +21,21 @@ function moveForward(rover){
 }
 
 function manageRover(rover, directions){
-    for (i = 0; i <= directions.length; i++){
+    for (let i = 0; i <= directions.length; i++){
         let direction = directions[i];
         switch(direction){
             case "l":
                 turnLeft(rover, direction);
                 break;
-            case "r":
-                turnRight(rover, direction);
-                break;
-            case "f":
-                moveForward(rover, direction);
-                break;
+  //          case "r":
+  //              turnRight(rover, direction);
+  //              break;
+  //          case "f":
+  //              moveForward(rover, direction);
+  //              break;
         }
         console.log(`Rover facing direction ${direction}`);
     }
 }
 manageRover(rover, "lrl");
+
