@@ -18,3 +18,4 @@ var myPlants = [
 ];
 
 console.log(myPlants[1].list[1])
+console.log(myPlants[0].list[1])
