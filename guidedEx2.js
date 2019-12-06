@@ -18,9 +18,9 @@ function placeHorizontal(thePlayer, command){
         if (command === "l"){
     //substract from y property:
             thePlayer.y--;
-    } else {
+        } else {
     // move to the right: add to y property:
-        thePlayer.y++;
+            thePlayer.y++;
     }
     thePlayer.path.push({x: thePlayer.x, y: thePlayer.y});
     console.log(`Player has position: x=${thePlayer.x} and y=${thePlayer.y}`);

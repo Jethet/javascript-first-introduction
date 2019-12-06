@@ -1,4 +1,4 @@
-let rover = {
+const rover = {
     direction: "N"
 };
 
