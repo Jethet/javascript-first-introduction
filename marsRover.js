@@ -2,7 +2,8 @@
 const rover = {
     direction: "N",
     x: 0,
-    y: 0
+    y: 0,
+    travelLog: [{x:0, y:0}]
 };
 
 function turnLeft(rover){
@@ -73,10 +74,10 @@ function manageRover(rover, directions){
                 moveForward(rover, orientation);
                 console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
                 break;
-            
         }
-        
     }
+    rover.travelLog.push({x: rover.x, y: rover.y});
+    console.log(rover.travelLog);
 }
 //TWO EXAMPLES:
 
