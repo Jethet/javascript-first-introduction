@@ -148,6 +148,7 @@ will give:  mySplice = (3,4,5,6,7,8,9)
 CONDITIONALS:
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
 || (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
+WITH < YOU ALSO INCLUDE THE NUMBER THAT IS STATED: x < 5 can be 0, 1, 2, 3, 4 AND 5.
 ---------------------------------------------------------------------------------
 SWITCH STATEMENT can be used to handle many options to choose from. A switch statement tests a value and can
 have many case statements which define various possible values. Statements are executed from the first matched

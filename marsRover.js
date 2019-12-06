@@ -38,8 +38,8 @@ function turnRight(rover){
 }
 
 function moveForward(rover){
-    if (rover.x >= 0 && rover.x <= 9){
-        if (rover.y >= 0 && rover.y <= 9){
+    if (rover.x >= 0 && rover.x < 9){
+        if (rover.y >= 0 && rover.y < 9){
             if (rover.direction === "N"){
                 rover.y--;
                 //console.log(`Position is: ${rover.x}, ${rover.y}`);
@@ -80,6 +80,5 @@ function manageRover(rover, directions){
         
     }
 }
-manageRover(rover, "lf");
-manageRover(rover, "l");
-manageRover(rover, "fff");
+manageRover(rover, "r");
+manageRover(rover, "ffffffffffff");
