@@ -80,8 +80,8 @@ function moveBackwards(rover){
 }
 function manageRover(rover, directions){
     for (let i = 0; i <= directions.length; i++){
-        if (directions[i] === "l" || directions[i] === "r" || directions[i] === "f" || directions[i] === "b"){
-            let orientation = directions[i];
+        let orientation = directions[i];
+        if (["l", "r", "f", "b"].includes(orientation)){
             switch(orientation){
                 case "l":
                     turnLeft(rover, orientation);
