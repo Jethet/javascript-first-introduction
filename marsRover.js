@@ -52,9 +52,10 @@ function moveForward(rover){
         } else if (rover.direction === "E"){
             rover.x++;
             //console.log(`Position is: ${rover.x}, ${rover.y}`);
-    } else {
-        console.log("The rover cannot be placed outside the grid.");
+    } 
     }
+    else {
+        console.log("The rover cannot be placed outside the grid.");
     }
 }
 
@@ -73,9 +74,9 @@ function moveBackwards(rover){
             rover.x++;
             //console.log(`Position is: ${rover.x}, ${rover.y}`);
         }
+    }
     else {
         console.log("The rover cannot be placed outside the grid.");
-    }
     }
 }
 function manageRover(rover, directions){
@@ -100,7 +101,8 @@ function manageRover(rover, directions){
                     console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
                     break;
             }
-        } else {
+        } 
+        else {
             console.log("Please use correct directions: f, b, r and l.");
         }
     }
@@ -109,4 +111,4 @@ function manageRover(rover, directions){
 }
 
 
-manageRover(rover, "b");
+manageRover(rover, "f");
