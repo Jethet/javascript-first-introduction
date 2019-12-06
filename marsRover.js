@@ -62,16 +62,16 @@ function moveBackwards(rover){
     if (rover.x >= 0 && rover.x <= 9 && rover.y >= 0 && rover.y <= 9){
         if (rover.direction === "N"){
             rover.y++;
-            console.log(`Position is: ${rover.x}, ${rover.y}`);
+            //console.log(`Position is: ${rover.x}, ${rover.y}`);
         } else if (rover.direction === "S"){
             rover.y--;
-            console.log(`Position is: ${rover.x}, ${rover.y}`);
+            //console.log(`Position is: ${rover.x}, ${rover.y}`);
         } else if (rover.direction === "W"){
             rover.x--;
-            console.log(`Position is: ${rover.x}, ${rover.y}`);
+            //console.log(`Position is: ${rover.x}, ${rover.y}`);
         } else if (rover.direction === "E"){
             rover.x++;
-            console.log(`Position is: ${rover.x}, ${rover.y}`);
+            //console.log(`Position is: ${rover.x}, ${rover.y}`);
         }
     else {
         console.log("The rover cannot be placed outside the grid.");
@@ -103,6 +103,7 @@ function manageRover(rover, directions){
     rover.travelLog.push({x: rover.x, y: rover.y});
     console.log(rover.travelLog);
 }
+
 //TWO EXAMPLES:
 
 //manageRover(rover, "rffffffffffff");
@@ -130,6 +131,5 @@ The rover should not move from 0 to -1: this should not be possible and the mess
 */
 
 manageRover(rover, "bb");
-manageRover(rover, "rf");
-manageRover(rover, "ffl");
-manageRover(rover, "ff");
+manageRover(rover, "rrb");
+manageRover(rover, "bbbb");
