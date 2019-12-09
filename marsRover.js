@@ -52,7 +52,7 @@ function moveForward(rover){
         } else if (rover.direction === "E"){
             rover.x++;
             //console.log(`Position is: ${rover.x}, ${rover.y}`);
-    } 
+        } 
     }
     else {
         console.log("The rover cannot be placed outside the grid.");
@@ -60,55 +60,59 @@ function moveForward(rover){
 }
 
 function moveBackwards(rover){
-    if (rover.x >= 0 && rover.x <= 9 && rover.y >= 0 && rover.y <= 9){
-        if (rover.direction === "N"){
-            rover.y++;
-            //console.log(`Position is: ${rover.x}, ${rover.y}`);
-        } else if (rover.direction === "S"){
-            rover.y--;
-            //console.log(`Position is: ${rover.x}, ${rover.y}`);
-        } else if (rover.direction === "W"){
-            rover.x--;
-            //console.log(`Position is: ${rover.x}, ${rover.y}`);
-        } else if (rover.direction === "E"){
-            rover.x++;
-            //console.log(`Position is: ${rover.x}, ${rover.y}`);
-        }
-    }
-    else {
-        console.log("The rover cannot be placed outside the grid.");
+    if (rover.direction === "N"){
+        rover.y++;
+        //console.log(`Position is: ${rover.x}, ${rover.y}`);
+    } else if (rover.direction === "S"){
+        rover.y--;
+        //console.log(`Position is: ${rover.x}, ${rover.y}`);
+    } else if (rover.direction === "W"){
+        rover.x--;
+        //console.log(`Position is: ${rover.x}, ${rover.y}`);
+    } else if (rover.direction === "E"){
+        rover.x++;
+        //console.log(`Position is: ${rover.x}, ${rover.y}`);
     }
 }
+   
+
 function manageRover(rover, directions){
     for (let i = 0; i <= directions.length; i++){
-        let orientation = directions[i];
-        if (["l", "r", "f", "b"].includes(orientation)){
-            switch(orientation){
-                case "l":
-                    turnLeft(rover, orientation);
-                    //console.log(`Rover facing direction ${rover.direction}`);
-                    break;
-                case "r":
-                    turnRight(rover, orientation);
-                    //console.log(`Rover facing direction ${rover.direction}`);
-                    break;
-                case "f":
-                    moveForward(rover, orientation);
-                    console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
-                    break;
-                case "b":
-                    moveBackwards(rover, orientation);
-                    console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
-                    break;
+        if (rover.x >= 0 && rover.x <= 9 && rover.y >= 0 && rover.y <= 9){
+            let orientation = directions[i];
+            if (["l", "r", "f", "b"].includes(orientation)){
+                switch(orientation){
+                    case "l":
+                        turnLeft(rover, orientation);
+                        //console.log(`Rover facing direction ${rover.direction}`);
+                        break;
+                    case "r":
+                        turnRight(rover, orientation);
+                        //console.log(`Rover facing direction ${rover.direction}`);
+                        break;
+                    case "f":
+                        moveForward(rover, orientation);
+                        console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
+                        break;
+                    case "b":
+                        moveBackwards(rover, orientation);
+                        console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
+                        break;
             }
-        } 
-        else {
-            console.log("Please use correct directions: f, b, r and l.");
+            rover.travelLog.push({x: rover.x, y: rover.y});
+            console.log(rover.travelLog);
+            }
+            else {
+                console.log("Please use correct directions: f, b, r and l.");
+            }
         }
-    }
-    rover.travelLog.push({x: rover.x, y: rover.y});
-    console.log(rover.travelLog);
+        else {
+            console.log("This move is outside the grid.");
+        }
+    }   
 }
 
+manageRover(rover, "brffl");
 
-manageRover(rover, "f");
+//With some directions, such as the above, I get the message: "Please use correct directions: f, b, r and l."
+//I have tried several changes in the code but have not found the error.
