@@ -1,0 +1,98 @@
+.div1 {
+    background-color: #00D1AE;
+    width: 170px;
+    border: 1px solid #17212e;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .div2 {
+    background-color: #00D1AE;
+    width: 175px;
+    height: 250px;
+    border: solid #17212e;
+    border-width: 20px 30px 0 0;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+  }
+  
+  .div3 {
+    background-color: #00D1AE;
+    width: 175px;
+    height: 250px;
+    border: solid #17212e;
+    border-width: 20px 30px 0 0;
+    border-radius: 40px;
+    border-top-right-radius: 50px 40px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+  }
+  
+  .div4 {
+    background-color: #00D1AE;
+    width: 175px;
+    height: 200px;
+    border: solid;
+    border-color: #136a4f  #00271b;
+    border-width: 20px 30px 0 0;
+    border-radius: 40px;
+    border-top-right-radius: 50px 40px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+  }
+  
+  .div5 {
+    background-color: #00D1AE;
+    width: 0;
+    height: 0;
+    border: solid;
+    border-color: #136a4f #00271b black;
+    border-width: 10px;
+    border-radius: 220px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+  }
+  
+  .div6 {
+    background-color: green;
+    width: 0;
+    height: 0;
+    border: solid;
+    border-color: blue black red yellow;
+    border-width: 50px;
+    border-radius: 220px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+  }
+  
+  .div8 {
+    background-color: yellow;
+    width: 125px;
+    height: 150px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 200px 0;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+    transition: .5s;
+  }
+  
+  .div8:hover {
+    background-color: blue;
+    width: 125px;
+    height: 150px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 0 200px;
+    padding: 10px;
+    margin: 50px 10px 10px 50px;
+  }
+  
+  
