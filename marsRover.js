@@ -75,7 +75,7 @@ function moveBackwards(rover){
 }
    
 function manageRover(rover, directions){
-    for (let i = 0; i <= directions.length; i++){
+    for (let i = 0; i < directions.length; i++){
         if (rover.x >= 0 && rover.x < 10 && rover.y >= 0 && rover.y < 10){
             let orientation = directions[i];
             if (["l", "r", "f", "b"].includes(orientation)){
@@ -110,7 +110,12 @@ function manageRover(rover, directions){
     }   
 }
 
-manageRover(rover, "rffrfflff");
+manageRover(rover, "rffffffffff");
 
 //With some directions, such as the above, I get the message: "Please use correct directions: f, b, r and l."
 //I have tried several changes in the code but have not found the error.
+
+/* PROBLEM WITH INDEX USING FOR LOOP: i < whatever.length NOT i <=
+whatever = [1, 2, 3, 4, 5, 6, 7]
+==> this means index ends at 6, you start counting from 0 !!
+*/
