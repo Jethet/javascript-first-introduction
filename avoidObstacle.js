@@ -1,4 +1,3 @@
-
 const rover = {
     direction: "N",
     x: 0,
@@ -6,7 +5,7 @@ const rover = {
     travelLog: [{x:0, y:0}]
 };
 
-let obstacle = [x,y];
+let obstacle = [];
 
 function turnLeft(rover){
     if (rover.direction === "N"){
@@ -75,10 +74,22 @@ function moveBackwards(rover){
         //console.log(`Position is: ${rover.x}, ${rover.y}`);
     }
 }
-   
-function manageRover(rover, directions){
+
+function avoidObstacle(rover, obstacle){
+    if ((rover.y + 1) === obstacle || (rover.x + 1) === obstacle ) {
+        console.log("You cannot move forward due to an obstacle");
+    } else if ((rover.y - 1) === obstacle || (rover.x - 1) === obstacle ) {
+        console.log("You cannot move backward due to an obstacle");
+    }
+}
+
+function manageRover(rover, directions, obstacle){
     for (let i = 0; i < directions.length; i++){
-        if (rover.x >= 0 && rover.x < 10 && rover.y >= 0 && rover.y < 10){
+        if ((rover.y + 1) === obstacle.y || (rover.x + 1) === obstacle.x ) {
+            console.log("You cannot move forward due to an obstacle");
+        } else if ((rover.y - 1) === obstacle.y || (rover.x - 1) === obstacle.x) {
+            console.log("You cannot move backward due to an obstacle");
+        } else if (rover.x >= 0 && rover.x < 10 && rover.y >= 0 && rover.y < 10){
             let orientation = directions[i];
             if (["l", "r", "f", "b"].includes(orientation)){
                 switch(orientation){
@@ -97,7 +108,7 @@ function manageRover(rover, directions){
                     case "b":
                         moveBackwards(rover, orientation);
                         console.log(`Rover facing direction ${rover.direction}, x is ${rover.x} and y is ${rover.y}`);
-                        break;
+                        break;      
             }
             rover.travelLog.push({x: rover.x, y: rover.y});
             console.log(rover.travelLog);
@@ -109,13 +120,8 @@ function manageRover(rover, directions){
         else {
             console.log("This move is outside the grid.");
         }
-    }   
+    }
+ 
 }
 
-manageRover(rover, "rffrfflff");
-
-
-/* PROBLEM WITH INDEX USING FOR LOOP: i < whatever.length NOT i <=
-whatever = [1, 2, 3, 4, 5, 6, 7]
-==> this means index ends at 6, you start counting from 0 !!
-*/
+manageRover(rover, "rrf", [{x:0, y:1}]);
