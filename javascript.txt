@@ -26,6 +26,8 @@ variables cannot start with a number or contain spaces but $ and _ can be used
 EMPTY VALUES: two special values are null and undefined. These denote the absence of meaningful value.
 Null and undefined are values but carry no information.
 
+TYPE OF VARIABLE: use typeof (lowercast!!)   ==> console.log(typeof myVar);
+
 Assignment always goes from right to left. Everything to the right of the
 = operator is resolved before the value is assigned to the variable to the
 left of the operator. Example:
@@ -76,12 +78,25 @@ examples:
 myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
 
+BIG NUMBERS: use 'e'
+const someVar = 2e4;  ==> 20000   (same as 2 * 10000)
+const myVar = 5e-4;   ==> 0.0005  (same as 5/10000)
+
 JavaScript has a Math module which contains more advanced functions:
     Math.abs      calculates the absolute value of a number
     Math.exp      calculates e to the power of a number
-    Math.pow(x,y) calculates the result of x to the power of y
-    Math.floor    removes the fraction part from a number
     Math.random() will give a random number x where 0<=x<1
+    Math.pow(x,y) calculates the result of x to the power of y
+    Math.floor()  rounds down: removes the fraction part from a number
+    Math.ceil()   rounds up: adds to fraction part to become next full number
+    Math.round()  rounds to the nearest integer
+   
+ROUNDING TO DIGITS:
+To round a number to two or whatever digits, use multiply and divide with Math.round():
+let myNumber = 5.34567;
+let roundedToOne = Math.round(myNumber*10)/10;    ==> 5.3
+let roundedToTwo = Math.round(myNumber*100)/100;  ==> 5.34    (Note decimal rounding to 34!)
+let roundedToThree = Math.round(myNumber*1000)/1000; ==> 5.346  (Note decimal rounding to 46!)
 ---------------------------------------------------------------------------------
 Quotes: using "" for a string means that quotes cause problems. JS uses \ in front of a quoted text:
 "This is how to \"quote\" a quote."
