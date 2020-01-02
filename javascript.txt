@@ -104,7 +104,8 @@ let roundedToTwo = Math.round(myNumber*100)/100;  ==> 5.34    (Note decimal roun
 let roundedToThree = Math.round(myNumber*1000)/1000; ==> 5.346  (Note decimal rounding to 46!)
 
 BINARY NUMERAL SYSTEM causes 'off' calculations !!
-0.1 + 0.2 will result in 0.3000000000000004  => this creates HUGE problems with calculations.
+0.1 + 0.2 will result in 0.3000000000000004  Same problem with multiplication, or typing any 
+number in 16 digits  => this creates HUGE problems with calculations.
 To avoid this: always use .toFixed(n) and make sure you change the result into a number
 with Number() because .toFixed(n) always returns a string !!
 
@@ -226,7 +227,7 @@ function test (myCondition) {
   }
 }
 The function is executed from TOP to BOTTOM so be careful of what statement comes first.
-
+----------------------------------------------------------------------------------
 FOR loop:
 For loops are declared with three optional expressions separated by semicolons:
 for (initialization; condition; final-expression) {  ....  }
@@ -239,7 +240,7 @@ This means if condition starts as false, the loop will never execute.
 The final-expression is executed at the end of each loop iteration, prior to the next
 condition check and is usually used to increment or decrement the counter. This can be
 done i++ or i+=2 or i+=3, etc.  Example: for (let i = 0; i < 5; i++) { .... }
-
+----------------------------------------------------------------------------------
 WHILE loop:
 let ourArray = [];
 let i = 0;
@@ -247,6 +248,7 @@ while(i < 5) {
   ourArray.push(i);   ==> this adds i to ourArray[]
   i++;                ==> this iterates until i === 5
 }
+----------------------------------------------------------------------------------
 DO .. WHILE loop:
 A do...while loop will first do one pass of the code inside the loop no matter what,
 and then continue to run the loop while the specified condition evaluates to true:
@@ -259,7 +261,7 @@ do {
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE.
 The condition comes after running the code and if this condition is met, the loop will
 stop. If the condition is not met, the loop will continue.
-
+----------------------------------------------------------------------------------
 FOREACH  (forEach) loops:
 forEach iterates through the array and has access to each element, and is more readable.
 In ES5 (option 1):
