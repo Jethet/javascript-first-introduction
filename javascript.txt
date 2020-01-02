@@ -78,6 +78,9 @@ examples:
 myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
 
+To change a string into a number: Number().
+Use toString() to convert a number to a string.
+
 BIG NUMBERS: use 'e'
 const someVar = 2e4;  ==> 20000   (same as 2 * 10000)
 const myVar = 5e-4;   ==> 0.0005  (same as 5/10000)
@@ -85,11 +88,13 @@ const myVar = 5e-4;   ==> 0.0005  (same as 5/10000)
 JavaScript has a Math module which contains more advanced functions:
     Math.abs      calculates the absolute value of a number
     Math.exp      calculates e to the power of a number
-    Math.random() will give a random number x where 0<=x<1
+    Math.random() will give a random number x where 0<=x<1 (not including 1 !)
     Math.pow(x,y) calculates the result of x to the power of y
     Math.floor()  rounds down: removes the fraction part from a number
     Math.ceil()   rounds up: adds to fraction part to become next full number
     Math.round()  rounds to the nearest integer
+    Math.max(x,y) returns greatest of number of arguments
+    Math.min(x,y) returns smallest of number of arguments
    
 ROUNDING TO DIGITS:
 To round a number to two or whatever digits, use multiply and divide with Math.round():
@@ -97,6 +102,12 @@ let myNumber = 5.34567;
 let roundedToOne = Math.round(myNumber*10)/10;    ==> 5.3
 let roundedToTwo = Math.round(myNumber*100)/100;  ==> 5.34    (Note decimal rounding to 34!)
 let roundedToThree = Math.round(myNumber*1000)/1000; ==> 5.346  (Note decimal rounding to 46!)
+
+BINARY NUMERAL SYSTEM causes 'off' calculations !!
+0.1 + 0.2 will result in 0.3000000000000004  => this creates HUGE problems with calculations.
+To avoid this: always use .toFixed(n) and make sure you change the result into a number
+with Number() because .toFixed(n) always returns a string !!
+
 ---------------------------------------------------------------------------------
 Quotes: using "" for a string means that quotes cause problems. JS uses \ in front of a quoted text:
 "This is how to \"quote\" a quote."
