@@ -421,6 +421,13 @@ myVar = myFunc(15);  ==> this would be 4
 NOTE: semi-columns used everywhere
 If, else if, for and switch can all be used inside a function.
 
+CALLBACK functions are functions that are passed into another function (only function name is
+used when passing into other function, no () are used): a callback function is executed AFTER
+another function is executed. This way you can make sure some piece of code does not execute 
+BEFORE some other code has finished executing.
+
+ANONYMOUS functions are declared without a name to refer to the function. It is not accessible
+after creation, unless it is assigned to a variable: const anon = function() { .... } etc.
 
 ----------------------------------------------------------------------------------------------
 PROMPT for input (only works in browser environment)
