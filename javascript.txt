@@ -27,7 +27,15 @@ EMPTY VALUES: two special values are null and undefined. These denote the absenc
 Null and undefined are values but carry no information.
 
 TYPE OF VARIABLE: use typeof (lowercast!!)   ==> console.log(typeof myVar);
-
+--------------------------------------------------------------------------------------------
+JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
+a value to the type it needs, with a confusing set of rules. Example:
+console.log("5" - 1);  will result in 4
+console.log("5" + 1);  will result in 51
+This can be useful to find out if a value has a real value, example: console.log(null==0);
+This means that with == JS can CHANGE the type of value.
+If you want to test if a value is PRECISELY equal to the other (or not) use: === and !==
+--------------------------------------------------------------------------------------------
 Assignment always goes from right to left. Everything to the right of the
 = operator is resolved before the value is assigned to the variable to the
 left of the operator. Example:
@@ -59,7 +67,7 @@ LOCAL SCOPE: variables declared in a function are not defined outside that funct
 not visible.
 It is possible to have both local and global variables with the SAME name. In this case the
 local variable takes precedence over the global variable.
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 addition (+), subtraction (-), division (/) and multiplication (*) are the same as in Python.
 incrementing (adding) one to a variable is done with ++
 Example: i = i + 1 can be used with the ++ operator and becomes: i++
@@ -77,7 +85,7 @@ This can also be done with multiplication: *  and  division /
 examples:
 myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 CONVERT number to string and vice versa:
 To change a string into a number: Number(n) or put + before varName.toFixed(n).
 Use toString() to convert a number to a string.
@@ -110,7 +118,7 @@ number in 16 digits  => this creates HUGE problems with calculations.
 To avoid this: always use .toFixed(n) and make sure you change the result into a number
 with Number() because .toFixed(n) always returns a string !!
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 Quotes: using "" for a string means that quotes cause problems. JS uses \ in front of a quoted text:
 "This is how to \"quote\" a quote."
 IMPORTANT: when using single quotes ('') and double quotes (""), for example describing a conversation,
@@ -138,7 +146,7 @@ over several lines. This means:
 myVar = "This is a very long long long long sentence, including a space because another
 sentence is added. " myVar += "This part is added after the first part."
 THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 STRING METHODS to manipulate strings:
 .length:      with myVar.length you can calculate the length of a string.
 index[]:      to find a specific instance in a string: myVar[1] for the second
@@ -172,12 +180,12 @@ The deleted element(s) can be put into a variable:
 let myArray = [0,1,2,3,4,5,6,7,8,9]; ==> let mySplice = myArray.splice(3,5);
 will give:  mySplice = (3,4,5,6,7,8,9)
 
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 CONDITIONALS:
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
 || (= or) can be used to check conditions to see if ONE of them is true or false: if (val a < 10 || val b > 20)
 WITH < YOU ALSO INCLUDE THE NUMBER THAT IS STATED: x < 5 can be 0, 1, 2, 3, 4 AND 5.
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 SWITCH STATEMENT can be used to handle many options to choose from. A switch statement tests a value and can
 have many case statements which define various possible values. Statements are executed from the first matched
 case value until a break is encountered:
@@ -216,7 +224,7 @@ switch(val) {
   case 4:
     result = "4 alone";
 }
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 IF and ELSE IF and ELSE loops:
 function test (myCondition) {
   if (myCondition) {
@@ -228,7 +236,7 @@ function test (myCondition) {
   }
 }
 The function is executed from TOP to BOTTOM so be careful of what statement comes first.
-----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 FOR loop:
 For loops are declared with three optional expressions separated by semicolons:
 for (initialization; condition; final-expression) {  ....  }
@@ -241,7 +249,7 @@ This means if condition starts as false, the loop will never execute.
 The final-expression is executed at the end of each loop iteration, prior to the next
 condition check and is usually used to increment or decrement the counter. This can be
 done i++ or i+=2 or i+=3, etc.  Example: for (let i = 0; i < 5; i++) { .... }
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 WHILE loop:
 let ourArray = [];
 let i = 0;
@@ -249,7 +257,7 @@ while(i < 5) {
   ourArray.push(i);   ==> this adds i to ourArray[]
   i++;                ==> this iterates until i === 5
 }
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 DO .. WHILE loop:
 A do...while loop will first do one pass of the code inside the loop no matter what,
 and then continue to run the loop while the specified condition evaluates to true:
@@ -262,7 +270,7 @@ do {
 Important: a do .. while loop ensures that the code inside the loop runs at least ONCE.
 The condition comes after running the code and if this condition is met, the loop will
 stop. If the condition is not met, the loop will continue.
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 FOREACH  (forEach) loops:
 forEach iterates through the array and has access to each element, and is more readable.
 In ES5 (option 1):
@@ -272,7 +280,7 @@ myArray.forEach(function(whatever){
 ===> the closing bracket comes last!! the curly braces are INSIDE of the brackets
      of the function
 
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 BREAK and CONTINUE:
 break:  exits the loop, continues executing code after the loop (if there is any),
         'jumps out' of the loop.
@@ -282,7 +290,7 @@ continue: breaks one iteration in the loop if a specified condition appears, the
               is executed again;
           ==> continue in 'for' loop: increment expression (i++) is first evaluated,
               then the condition is tested to see if another iteration should be done.
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 OBJECTS:
 Objects are collections of values called properties, in a data structure similar to
 a dictionary. Objects are initialised with {}: let myObject = {}.
@@ -372,7 +380,7 @@ let a = [
 ACCESS DATA IN COMPLEX OBJECTS:
 Use both the .dot and []brackets methods:
 "employee" = a.0["firstName"]
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 NESTED DATA STRUCTURES: arrays & objects
 This is about organising data: const myObject = {     const secObject = {
                                   prop1: "One",          prop1: "Word",
@@ -392,12 +400,14 @@ theseObj[0]  ==> returns: prop1: "One", prop2: "Two"
 theseObj[0].prop1 ==> returns: "One"
 
 
----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 FUNCTIONS are built using:
 function functionName() {
   <what the function does>;
   <optional: return; ==> this ends the function immediately!>
 }
+
+Function name: start with verb (e.g. function findValue, sayHello, calculateEven).
 PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed into the function.
 Pass values into a function with ARGUMENTS and use a return statement to send a value back out of a function.
 
@@ -411,18 +421,14 @@ myVar = myFunc(15);  ==> this would be 4
 NOTE: semi-columns used everywhere
 If, else if, for and switch can all be used inside a function.
 
-JS uses type coercion. This means that when an operator is applied to the "wrong" type of value, JS converts
-a value to the type it needs, with a confusing set of rules. Example:
-console.log("5" - 1);  will result in 4
-console.log("5" + 1);  will result in 51
-This can be useful to find out if a value has a real value, example: console.log(null==0);
-This means that with == JS can CHANGE the type of value.
-If you want to test if a value is PRECISELY equal to the other (or not) use: === and !==
-----------------------------------------------------------------------------------
-PROMPT for input:
+
+----------------------------------------------------------------------------------------------
+PROMPT for input (only works in browser environment)
 When the function prompt() is called it is passed a string and it will present the user with the string and
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
 Example:    let name = prompt('What is your name?');
+
+
 
 =================================================================================
 ERROR MESSAGE RE. ES6:
