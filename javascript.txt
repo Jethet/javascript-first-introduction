@@ -453,12 +453,26 @@ ANONYMOUS functions are declared without a name to refer to the function. It is 
 after creation, unless it is assigned to a variable: const anon = function() { .... } etc. An
 anonymous function can be used as a parameter passed to another function.
 
+RECURSION
+Recursion is a function calling itself. 
+A recursive function has 3 key features:
+1. a termination condition (to prevent the recursion from running forever)
+2. a base case: the goal of the recursive function (if (....) return ...)
+3. the recursion: the function calling itself.
+
+
+
 ----------------------------------------------------------------------------------------------
 PROMPT for input (only works in browser environment)
 When the function prompt() is called it is passed a string and it will present the user with the string and
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
 Example:    let name = prompt('What is your name?');
 
+----------------------------------------------------------------------------------------------
+
+Factorial of a number:
+Multiply the number by itself and then again minus one until you reach the number one:
+Factorial of 4 is 4 * 3 * 2 * 1 (= 24)
 
 
 =================================================================================
