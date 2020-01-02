@@ -407,19 +407,42 @@ function functionName() {
   <optional: return; ==> this ends the function immediately!>
 }
 
-Function name: start with verb (e.g. function findValue, sayHello, calculateEven).
-PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed into the function.
-Pass values into a function with ARGUMENTS and use a return statement to send a value back out of a function.
+- A function name should start with verb (e.g. function findValue, sayHello, calculateEven).
+- A function should do ONE THING: separate a big problem into smaller ones.
+- Grouping bunches of instructions may mean the function is doing more than one thing.
+- Functions of more than 20 lines of code are probably not right.
 
-A variable can receive the value of a function: everything on the right of the = sign is resolved before assigning
-the result to a variable:
+PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed
+into the function. Pass values into a function with ARGUMENTS and use a return statement to 
+send a value back out of a function.
+
+If, else if, for and switch can all be used inside a function.
+
+A variable can receive the value of a function: everything on the right of the = sign is 
+resolved before assigning the result to a variable:
 let myVar;
 function myFunc(num) {
   return (num + 25) / 10;
 }
 myVar = myFunc(15);  ==> this would be 4
-NOTE: semi-columns used everywhere
-If, else if, for and switch can all be used inside a function.
+NOTE: semi-columns used everywhere.
+
+FUNCTION DECLARATION: created at the beginning of the script when execution starts
+==> using function declaration we can call a function before it is initialised:
+greeting("Ana");
+function greeting(name){
+  console.log(`Hello ${name}!`)
+}
+FUNCTION EXPRESSION: created when execution reaches to that point in the code (and can
+be used from that point onwards, NOT earlier).
+
+ARROW FUNCTIONS have a simpler syntax (similar to function expression):
+let greeting = name => {
+  return name;
+}
+This can be SHORTENED to: let greeting = name => name;
+PARENTHESES are obligatory if no parameter or more than one parameter is passed:
+let greeting = (firstName, lastName) => name;
 
 CALLBACK functions are functions that are passed into another function (only function name is
 used when passing into other function, no () are used): a callback function is executed AFTER
@@ -427,7 +450,8 @@ another function is executed. This way you can make sure some piece of code does
 BEFORE some other code has finished executing.
 
 ANONYMOUS functions are declared without a name to refer to the function. It is not accessible
-after creation, unless it is assigned to a variable: const anon = function() { .... } etc.
+after creation, unless it is assigned to a variable: const anon = function() { .... } etc. An
+anonymous function can be used as a parameter passed to another function.
 
 ----------------------------------------------------------------------------------------------
 PROMPT for input (only works in browser environment)
