@@ -8,9 +8,10 @@ function descend(number) {
   for (let i = 0; i <= number.length; i++) {
     if (i > number[0]) {
       numb.add(i);
-        i++;
     } else {
       console.log(numb);
     }
   }
 }
+
+descend(21445);

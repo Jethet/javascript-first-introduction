@@ -18,3 +18,4 @@ function cc(card) {
 
 cc(5);
 cc(4);
+cc(10);

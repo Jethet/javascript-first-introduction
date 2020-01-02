@@ -77,8 +77,9 @@ This can also be done with multiplication: *  and  division /
 examples:
 myVar = myVar * 5; can be written: myVar *= 5;
 myVar = myVar / 2; can be written: myVar /= 2;
-
-To change a string into a number: Number().
+----------------------------------------------------------------------------------
+CONVERT number to string and vice versa:
+To change a string into a number: Number(n) or put + before varName.toFixed(n).
 Use toString() to convert a number to a string.
 
 BIG NUMBERS: use 'e'
