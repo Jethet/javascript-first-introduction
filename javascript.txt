@@ -273,6 +273,16 @@ myArray.forEach(function(whatever){
      of the function
 
 ----------------------------------------------------------------------------------
+BREAK and CONTINUE:
+break:  exits the loop, continues executing code after the loop (if there is any),
+        'jumps out' of the loop.
+continue: breaks one iteration in the loop if a specified condition appears, then
+          continues with the next iteration in the loop: 'jumps over' one iteration.
+          ==> continue in 'while' loop: condition is tested,, and if true the loop
+              is executed again;
+          ==> continue in 'for' loop: increment expression (i++) is first evaluated,
+              then the condition is tested to see if another iteration should be done.
+----------------------------------------------------------------------------------
 OBJECTS:
 Objects are collections of values called properties, in a data structure similar to
 a dictionary. Objects are initialised with {}: let myObject = {}.
