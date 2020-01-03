@@ -358,11 +358,12 @@ UPDATE - ADD - DELETE  PROPERTIES:
 After creating a JavaScript object, its properties can be updated by using either
 dot or bracket notation (in same way as creating new property):
 myObject.lastName = "New name"   or   myObject["lastName"] = "New name"
-ADDING properties works the same way: myObject.newProperty = "A new property"
-DELETE PROPERTIES with 'delete' and space:  delete myObject.newProperty
+ADDING properties works the same way: myObject.newKey = "A new property"
+DELETE PROPERTIES with 'delete' and space:  delete myObject.newKey
 
 OBJECT METHODS:
-Object.keys(name-of-object);  this returns a list of all keys (= all properties)
+Object.keys(name-of-object)  returns a list of all keys of the properties
+for ... in      to walk through properties of object e.g.: for(let key in objectName){ ..etc..}
 
 LOOPING OVER OBJECTS
 get all keys with: for(let key in name-of-object){    (NOTE: let key !!)

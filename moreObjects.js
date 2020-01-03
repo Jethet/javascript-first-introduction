@@ -11,4 +11,7 @@ console.log(oneObject);
 oneObject.twelve = 12;
 console.log(otherObject.nine);
 console.log('nine' in oneObject);
+delete otherObject.ten;
+console.log(otherObject);
 
+console.log(Object.keys(otherObject));
