@@ -10,7 +10,7 @@ console.log(myArray);
 
 mySplice.forEach(function(number){
     console.log(`What number is ${number}`);
-})
+});
 
 let newArray = [0,1,2,3,4,5,6,7,8,9];
 newArray.splice(9,10);

@@ -16,8 +16,7 @@ newArray.forEach(function(name){
     console.log(`This is ${name}`);
   });
 
-const examResult = [ 'John', 'Ben', 'Chris', 'Dave'];
 
-examResult.forEach(function(result, index){
-    console.log(`${result} received result ${index}!`);
-});
+//const raceResults = ['John', 'Ben', 'Chris', 'Dave'];
+
+['John', 'Ben', 'Chris', 'Dave'].forEach(element,index) => console.log(element +' finished race in ' + index + 'position'));
