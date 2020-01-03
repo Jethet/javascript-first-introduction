@@ -161,7 +161,7 @@ index[]:      to find a specific instance in a string: myVar[1] for the second
 .slice(start, end):        extracts characters from a string between two points, NOT
                            including 'end', and returns new string without altering original.
 
-
+----------------------------------------------------------------------------------------------
 ARRAYS: square brackets; indexing possible (also nested indexing)
 PUSH: add new value at END:  myArray.push()
 POP: remove and return the LAST value of array:  myArray.pop()
