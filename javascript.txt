@@ -148,7 +148,7 @@ sentence is added. " myVar += "This part is added after the first part."
 THESE TWO STRINGS WILL BE JOINED INTO ONE STRING
 --------------------------------------------------------------------------------------------
 STRING METHODS to manipulate strings:
-.length:      with myVar.length you can calculate the length of a string.
+.length:      with myVar.length you can calculate the length of a string: index + 1 (index starts at 0, therefore + 1)
 index[]:      to find a specific instance in a string: myVar[1] for the second
               character. Get last char with myVar[myVar.length - 1];
               NOTE: first mention variable and then [] brackets with let .length -1 !!
@@ -168,10 +168,10 @@ POP: remove and return the LAST value of array:  myArray.pop()
 SHIFT: remove and return the FIRST value of array: myArray.shift()
 UNSHIFT: add a new value as the FIRST value of array: myArray.unshift()
 
-SPLICING: Splicing arrays in JavaScript removes a certain part from an array and/or
-adds a new element in the array. The index (starting at 0) indicates WHERE the
-removal/addition will be. Syntax is: myArray.splice(1, 2) ==> on index 1 position
-two elements will be removed: element on position 1 and 2.
+SPLICE: Splicing arrays in JavaScript removes a certain part from an array and/or
+adds a new element in the array. The index (starting at 0) indicates WHERE the 
+removal/addition will be. Syntax is: myArray.splice(1, 2) ==> on position index 1 
+two elements will be removed: the elements on position 1 and 2.
 Using splice to add: myArray.splice(2, 0, "addition") ==> on index 2 position,
 no element is removed and a new element is added after it (so on index 3).
 Using splice to replace: myArray.splice(2, 1, "replace") ==> on index 2 position,
@@ -179,6 +179,14 @@ the element is deleted and "replace" is put in position index 2.
 The deleted element(s) can be put into a variable:
 let myArray = [0,1,2,3,4,5,6,7,8,9]; ==> let mySplice = myArray.splice(3,5);
 will give:  mySplice = (3,4,5,6,7,8,9)
+
+Methods that DO NOT CHANGE original but create duplicate with changes:
+REVERSE: creates a duplicate of original in reversed order: newArray = myArray.reverse()
+SORT: sorts elements by string comparison: newArray = myArray.sort()
+CONCAT: create new array based on elements in current array: newArray=myArray.concat(x,y,z)
+SLICE: creates copy and extracts a subarray: newArray = myArray.slice(x) (newArray has all 
+elements from x to end) or .slice(x,y (new array has elements from x to y, not including y)
+
 
 ---------------------------------------------------------------------------------------------
 CONDITIONALS:
