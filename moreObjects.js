@@ -15,3 +15,5 @@ delete otherObject.ten;
 console.log(otherObject);
 
 console.log(Object.keys(otherObject));
+console.log(Object.values(otherObject));
+

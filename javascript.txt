@@ -320,6 +320,10 @@ The properties of objects are written as key-value pairs i.e. name and value sep
 by a column (name: value) and with , between the property lines.
 Properties can be numbers or strings. If an object has any non-string properties,
 JavaScript will automatically typecast them as strings.
+NB: an object can be declared using const:
+  const students = {1:"Ana", 2:"Mike", 3:"Ellen"};
+You can add properties to this constant. However, the const properties CANNOT be changed
+by reassignment, for example.
 
 ACCESS DATA IN OBJECTS:
 The data in objects can be accessed through the properties, either with dot notation
@@ -362,8 +366,9 @@ ADDING properties works the same way: myObject.newKey = "A new property"
 DELETE PROPERTIES with 'delete' and space:  delete myObject.newKey
 
 OBJECT METHODS:
-Object.keys(name-of-object)  returns a list of all keys of the properties
+Object.keys(name-of-object)  returns an array of all keys of the properties
 for ... in      to walk through properties of object e.g.: for(let key in objectName){ ..etc..}
+Object.values(name-of-object) returns an array of the values of all properties.
 
 LOOPING OVER OBJECTS
 get all keys with: for(let key in name-of-object){    (NOTE: let key !!)
