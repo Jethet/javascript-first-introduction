@@ -19,4 +19,14 @@ newArray.forEach(function(name){
 
 //const raceResults = ['John', 'Ben', 'Chris', 'Dave'];
 
-['John', 'Ben', 'Chris', 'Dave'].forEach(element,index) => console.log(element +' finished race in ' + index + 'position'));
+//['John', 'Ben', 'Chris', 'Dave'].forEach(element,index) => console.log(element +' finished race in ' + index + 'position'));
+
+
+
+function printStarts(howMany){
+    console.log("*".repeat(howMany));
+}
+
+[1,2,3,4,5].forEach(function(num){
+    printStarts(num);
+});
