@@ -187,7 +187,12 @@ CONCAT: create new array based on elements in current array: newArray=myArray.co
 SLICE: creates copy and extracts a subarray: newArray = myArray.slice(x) (newArray has all 
 elements from x to end) or .slice(x,y (new array has elements from x to y, not including y)
 
-
+ITERATIVE methods:
+every()   returns true if current function returns true on each item
+filter()  returns an array of all items for which the current function returns true
+forEach() no return value: just runs the function on every element in the list
+map()     returns a new list with the result of each item in an array
+some()    returns true if current function returns true for at least some of the items
 ---------------------------------------------------------------------------------------------
 CONDITIONALS:
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....
