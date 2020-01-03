@@ -274,9 +274,18 @@ stop. If the condition is not met, the loop will continue.
 FOREACH  (forEach) loops:
 forEach iterates through the array and has access to each element, and is more readable.
 In ES5 (option 1):
-myArray.forEach(function(whatever){
-  console.log(`This is ${whatever}`)
+myArray.forEach(function(placeholder){
+  console.log(`This is ${placeholder}`)
 });
+===> use 'function', no name (is anonymous), can have 0, 1, 2 or 3 parameters:
+     0 parameters - call the function as many times as there are elements in the array
+                    no placeholder, can be just function();
+     FIRST parameter: is equal to each ELEMENT on every iteration and function is called
+                   for each of these;
+     SECOND parameter: is equal to the INDEX ==> myArray.forEach(element, index) {
+                                                    console.log(element, index)
+                                                    });
+
 ===> the closing bracket comes last!! the curly braces are INSIDE of the brackets
      of the function
 
