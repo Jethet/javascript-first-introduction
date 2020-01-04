@@ -1,2 +1,4 @@
 Object Oriented JavaScript - Derek Banas
 JS tutorial, same
+
+The Definitive Guide to OO JS - James Shore
