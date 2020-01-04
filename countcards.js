@@ -16,6 +16,9 @@ function cc(card) {
   return "Change Me";
 }
 
-cc(5);
-cc(4);
-cc(10);
+
+//  This version is imcomplete, see count.js
+
+cc(7);
+cc(3);
+cc("A");
