@@ -160,6 +160,13 @@ index[]:      to find a specific instance in a string: myVar[1] for the second
                            including 'end' point, and returns new string.
 .slice(start, end):        extracts characters from a string between two points, NOT
                            including 'end', and returns new string without altering original.
+.startsWith() determines if a string begins with the characters of a specified string (true/false)
+.endsWith()   same, for the end characters of the string (also returns true or false).
+              Can be used with parameter 'length': .endsWith(str, length) ==> length is start of
+              the search i.e. if length=10, the search for 'endsWith' looks at the end of the
+              string at character 10 (start counting with 1). If length is not defined, the 
+              entire string is considered length by default.
+
 
 ----------------------------------------------------------------------------------------------
 ARRAYS: square brackets; indexing possible (also nested indexing)
