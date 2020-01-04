@@ -326,6 +326,66 @@ continue: breaks one iteration in the loop if a specified condition appears, the
           ==> continue in 'for' loop: increment expression (i++) is first evaluated,
               then the condition is tested to see if another iteration should be done.
 ---------------------------------------------------------------------------------------------
+FUNCTIONS are built using:
+function functionName() {
+  <what the function does>;
+  <optional: return; ==> this ends the function immediately!>
+}
+
+- A function name should start with verb (e.g. function findValue, sayHello, calculateEven).
+- A function should do ONE THING: separate a big problem into smaller ones.
+- Grouping bunches of instructions may mean the function is doing more than one thing.
+- Functions of more than 20 lines of code are probably not right.
+
+PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed
+into the function. Pass values into a function with ARGUMENTS and use a return statement to 
+send a value back out of a function.
+
+If, else if, for and switch can all be used inside a function.
+
+A variable can receive the value of a function: everything on the right of the = sign is 
+resolved before assigning the result to a variable:
+let myVar;
+function myFunc(num) {
+  return (num + 25) / 10;
+}
+myVar = myFunc(15);  ==> this would be 4
+NOTE: semi-columns used everywhere.
+
+FUNCTION DECLARATION: created at the beginning of the script when execution starts
+==> using function declaration we can call a function before it is initialised:
+greeting("Ana");
+function greeting(name){
+  console.log(`Hello ${name}!`)
+}
+FUNCTION EXPRESSION: created when execution reaches to that point in the code (and can
+be used from that point onwards, NOT earlier).
+
+ARROW FUNCTIONS have a simpler syntax (similar to function expression):
+let greeting = name => {
+  return name;
+}
+This can be SHORTENED to: let greeting = name => name;
+PARENTHESES are obligatory if no parameter or more than one parameter is passed:
+let greeting = (firstName, lastName) => name;
+
+CALLBACK functions are functions that are passed into another function (only function name is
+used when passing into other function, no () are used): a callback function is executed AFTER
+another function is executed. This way you can make sure some piece of code does not execute 
+BEFORE some other code has finished executing.
+
+ANONYMOUS functions are declared without a name to refer to the function. It is not accessible
+after creation, unless it is assigned to a variable: const anon = function() { .... } etc. An
+anonymous function can be used as a parameter passed to another function.
+
+RECURSION
+Recursion is a function calling itself. 
+A recursive function has 3 key features:
+1. a termination condition (to prevent the recursion from running forever)
+2. a base case: the goal of the recursive function (if (....) return ...)
+3. the recursion: the function calling itself.
+
+----------------------------------------------------------------------------------------------
 OBJECTS:
 Objects are collections of values called properties, in a data structure similar to
 a dictionary. Objects are initialised with {}: let myObject = {}.
@@ -440,70 +500,13 @@ ACCESS DATA from an array of objects:
 theseObj[0]  ==> returns: prop1: "One", prop2: "Two"
 theseObj[0].prop1 ==> returns: "One"
 
+OBJECT-ORIENTED PROGRAMMING (OOP)
+OOP is programming based on the concept of objects that can contain attributes (=data fields)
+and methods (=code in the form of procedures).
+
 
 ---------------------------------------------------------------------------------------------
-FUNCTIONS are built using:
-function functionName() {
-  <what the function does>;
-  <optional: return; ==> this ends the function immediately!>
-}
 
-- A function name should start with verb (e.g. function findValue, sayHello, calculateEven).
-- A function should do ONE THING: separate a big problem into smaller ones.
-- Grouping bunches of instructions may mean the function is doing more than one thing.
-- Functions of more than 20 lines of code are probably not right.
-
-PARAMETERS can be used: variables that act as placeholders until values (arguments) are passed
-into the function. Pass values into a function with ARGUMENTS and use a return statement to 
-send a value back out of a function.
-
-If, else if, for and switch can all be used inside a function.
-
-A variable can receive the value of a function: everything on the right of the = sign is 
-resolved before assigning the result to a variable:
-let myVar;
-function myFunc(num) {
-  return (num + 25) / 10;
-}
-myVar = myFunc(15);  ==> this would be 4
-NOTE: semi-columns used everywhere.
-
-FUNCTION DECLARATION: created at the beginning of the script when execution starts
-==> using function declaration we can call a function before it is initialised:
-greeting("Ana");
-function greeting(name){
-  console.log(`Hello ${name}!`)
-}
-FUNCTION EXPRESSION: created when execution reaches to that point in the code (and can
-be used from that point onwards, NOT earlier).
-
-ARROW FUNCTIONS have a simpler syntax (similar to function expression):
-let greeting = name => {
-  return name;
-}
-This can be SHORTENED to: let greeting = name => name;
-PARENTHESES are obligatory if no parameter or more than one parameter is passed:
-let greeting = (firstName, lastName) => name;
-
-CALLBACK functions are functions that are passed into another function (only function name is
-used when passing into other function, no () are used): a callback function is executed AFTER
-another function is executed. This way you can make sure some piece of code does not execute 
-BEFORE some other code has finished executing.
-
-ANONYMOUS functions are declared without a name to refer to the function. It is not accessible
-after creation, unless it is assigned to a variable: const anon = function() { .... } etc. An
-anonymous function can be used as a parameter passed to another function.
-
-RECURSION
-Recursion is a function calling itself. 
-A recursive function has 3 key features:
-1. a termination condition (to prevent the recursion from running forever)
-2. a base case: the goal of the recursive function (if (....) return ...)
-3. the recursion: the function calling itself.
-
-
-
-----------------------------------------------------------------------------------------------
 PROMPT for input (only works in browser environment)
 When the function prompt() is called it is passed a string and it will present the user with the string and
 a textbox to enter a value in. The prompt function returns whatever value the user has inputted.
