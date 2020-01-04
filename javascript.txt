@@ -156,6 +156,8 @@ index[]:      to find a specific instance in a string: myVar[1] for the second
 .charAt(X):   shows the character on the Xth position in the string, counting from 0.
 .indexOf(substr):  returns index of character or string occurrence in a main string.
 .includes():  case-sensitive search to find particular pattern in a string (true or false).
+              Parameter length can be used: .includes(string, length) ==> search will start
+              at position indicated by 'length'.
 .substring(start, end):    extracts characters from a string between two points, NOT
                            including 'end' point, and returns new string.
 .slice(start, end):        extracts characters from a string between two points, NOT
@@ -165,8 +167,7 @@ index[]:      to find a specific instance in a string: myVar[1] for the second
               Can be used with parameter 'length': .endsWith(str, length) ==> length is start of
               the search i.e. if length=10, the search for 'endsWith' looks at the end of the
               string at character 10 (start counting with 1). If length is not defined, the 
-              entire string is considered length by default.
-
+              entire string is considered length by default. All search is case-sensitive!!
 
 ----------------------------------------------------------------------------------------------
 ARRAYS: square brackets; indexing possible (also nested indexing)
@@ -200,6 +201,11 @@ filter()  returns an array of all items for which the current function returns t
 forEach() no return value: just runs the function on every element in the list
 map()     returns a new list with the result of each item in an array
 some()    returns true if current function returns true for at least some of the items
+
+SPREAD operator for arrays: ... (three dots in front of array name)
+When ... (spread operator) is used, this returns the content of the array but not the 
+array itself. Example: const someWords = ["a", "b", "c"]   const someNumbers = [1,2,3,4]
+const mixWordNumbers = [...somewords, ...someNumbers];
 ---------------------------------------------------------------------------------------------
 CONDITIONALS:
 && (= and) can be used to combine conditions: if (val a < 10 && val a > 20) ....

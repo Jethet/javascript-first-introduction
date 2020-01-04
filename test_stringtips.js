@@ -46,3 +46,8 @@ console.log(greeting);
 
 console.log(greeting.endsWith('doing?'));
 console.log(greeting.endsWith('lo', 5));
+
+const someWords = ["a", "b", "c"];
+const someNumbers = [1,2,3,4];
+const mixWordNumbers = [...somewords, ...someNumbers];
+console.log(mixWordNumbers);
