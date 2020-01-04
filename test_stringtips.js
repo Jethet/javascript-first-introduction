@@ -1,4 +1,5 @@
-const price = 12.99;
+
+/*const price = 12.99;
 const statement = `The price of this amazing product is ${price}.`;
 console.log(statement, price);
 
@@ -37,3 +38,11 @@ console.log(text);
 let secondStr = text.slice(24, 32);
 console.log(secondStr);
 console.log(text);
+*/
+
+let greeting = `Hello Nick! 
+How are you doing?`;
+console.log(greeting);
+
+console.log(greeting.endsWith('doing?'));
+console.log(greeting.endsWith('lo', 5));
