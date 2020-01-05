@@ -25,6 +25,8 @@ for (let item of todos) {
     console.log(item.id, item.text);
 }
 
+// FUNCTIONAL PROGRAMMING: high order array methods
+
 // forEach:
 todos.forEach(function(item) {
     console.log(item.text, item.isCompleted);
@@ -49,6 +51,7 @@ const completedTodos = todos.filter(function(item) {
     return item.text;
 });
 console.log(completedTodos);
+
 
 /* Convert JS to JSON format: similar code:
 
