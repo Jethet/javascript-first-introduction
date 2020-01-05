@@ -14,3 +14,8 @@ console.log(person.name);
 let selection = 'name'
 person[selection] = 'Helen';
 console.log(person.name);
+console.log(person.name.split(''));
+
+let myArray = ['one', 'two', 'three', 'four'];
+console.log(Array.isArray(myArray));
+console.log(Array.isArray(person.name));
