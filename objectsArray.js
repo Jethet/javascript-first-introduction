@@ -52,6 +52,9 @@ const completedTodos = todos.filter(function(item) {
 });
 console.log(completedTodos);
 
+// Use arrow function: this will print all items from the array
+todos.forEach((item) => console.log(item));
+
 
 /* Convert JS to JSON format: similar code:
 

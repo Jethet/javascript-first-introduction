@@ -25,3 +25,18 @@ function addNums(num1=1, num2=1){
 }
 console.log(addNums(4, 6));
 console.log(addNums());
+
+// Arrow function:
+const addNumbers = (num1=1, num2=1) => {
+    return num1 + num2;
+};
+console.log(addNumbers(5,12));
+
+// For a simple arrow function, code can be simpler:
+const addSimple = (num1=1, num2=1) => num1 + num2;
+console.log(addSimple(3,9));
+console.log(addSimple());
+
+// Even simpler if you have one parameter only:
+const addFive = num1 => num1 + 5;
+console.log(addFive(9));
