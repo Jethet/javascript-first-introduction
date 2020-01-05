@@ -17,3 +17,11 @@ switch(color) {
         break;
 
 }
+
+// You can set default values for parameters in a function: these will be used if no
+// parameters are given; if parameters are given, these override the default values:
+function addNums(num1=1, num2=1){
+    return num1 + num2;
+}
+console.log(addNums(4, 6));
+console.log(addNums());
