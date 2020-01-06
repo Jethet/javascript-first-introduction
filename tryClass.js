@@ -1,4 +1,6 @@
 // Create CLASS instead of Person function in tryOOP.js
+// (this is sometimes called syntactic sugar: it does the
+// same thing in a different way)
 
 class Person {
     constructor(firstName, lastName, dob) {
