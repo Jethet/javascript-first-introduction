@@ -9,7 +9,7 @@ function Person(firstName, lastName, dob) {
     this.dob = new Date(dob); // This is the constructor for a date
 }
 
-// Using prototype with object name you can specify methods to be used with the object:
+// Using 'prototype' with the object name you can specify methods to be used with the object:
 Person.prototype.getBirthYear = function() {
     return this.dob.getFullYear(); // Use the getFullYear() function on the dob propery
 };
