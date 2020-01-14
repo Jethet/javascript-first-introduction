@@ -1,3 +1,5 @@
+// forEach method:
+
 const myArr = [1,2,3,4,5];
 
 myArr.forEach(function(e){
@@ -7,4 +9,9 @@ myArr.forEach(function(e){
 
 myArr.forEach(function(e, index){
     console.log(index,e);
+});
+
+myArr.forEach(function(e){
+    e = e + 'no.';
+    console.log(e);
 });
